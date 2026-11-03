@@ -1,0 +1,60 @@
+{"ticket_id": "T-1001", "channel": "email", "text": "Hi, I was charged twice for my blender order ord_20931. Two RM289 transactions on my card statement, one minute apart. Please refund the extra one.", "label": "billing"}
+{"ticket_id": "T-1002", "channel": "chat", "text": "my parcel stuck at penang hub since thursday, tracking says address cannot verify. order ord_21044. the address is correct leh", "label": "delivery"}
+{"ticket_id": "T-1003", "channel": "email", "text": "The blender arrived with a cracked jug. I have photos of the box too. I would like a replacement please, not a refund.", "label": "returns"}
+{"ticket_id": "T-1004", "channel": "app", "text": "Can the Pulse headphones connect to two phones at the same time? Thinking of buying.", "label": "product"}
+{"ticket_id": "T-1005", "channel": "email", "text": "I cannot log in, the OTP never arrives on my new number. I changed phones last week.", "label": "account"}
+{"ticket_id": "T-1006", "channel": "chat", "text": "Saya dah bayar guna FPX tapi status order masih \"processing\" dah 3 hari. Bila nak hantar?", "label": "delivery"}
+{"ticket_id": "T-1007", "channel": "email", "text": "Bought the air fryer 10 days ago, changed my mind, never opened the box. How do I return it and who pays postage?", "label": "returns"}
+{"ticket_id": "T-1008", "channel": "app", "text": "Refund for my keyboard was approved on 20 Oct but I still do not see it on my card. How long does it take?", "label": "billing"}
+{"ticket_id": "T-1009", "channel": "email", "text": "Earbuds left one side not charging after 2 weeks. Bought 25 Sept. What can I do?", "label": "returns"}
+{"ticket_id": "T-1010", "channel": "chat", "text": "Courier says delivered but I never received anything!! Order ord_20577. Nobody at guardhouse got it either.", "label": "delivery"}
+{"ticket_id": "T-1011", "channel": "email", "text": "Please update my email address on my account to my work email, the old one is no longer active.", "label": "account"}
+{"ticket_id": "T-1012", "channel": "app", "text": "Is the Lumen monitor VESA mount compatible? 100x100?", "label": "product"}
+{"ticket_id": "T-1013", "channel": "email", "text": "Your website showed RM129 for the kettle but I was charged RM137.90. Why the difference?", "label": "billing"}
+{"ticket_id": "T-1014", "channel": "chat", "text": "hi, can i change delivery address? order placed just now, wrong unit number", "label": "delivery"}
+{"ticket_id": "T-1015", "channel": "email", "text": "Received a black Shield case but I ordered blue. Can you exchange it?", "label": "returns"}
+{"ticket_id": "T-1016", "channel": "app", "text": "App keeps crashing when I open My Orders. Android 15, Samsung A55.", "label": "account"}
+{"ticket_id": "T-1017", "channel": "email", "text": "Does the rice cooker come with a Malaysian 3-pin plug or do I need an adapter?", "label": "product"}
+{"ticket_id": "T-1018", "channel": "chat", "text": "Bayaran saya ditolak dua kali dari e-wallet untuk satu order. Tolong semak.", "label": "billing"}
+{"ticket_id": "T-1019", "channel": "email", "text": "The parcel was promised for 18 Oct and arrived 29 Oct. That is more than a week late. Any compensation?", "label": "delivery"}
+{"ticket_id": "T-1020", "channel": "app", "text": "I want to delete my account and all my data.", "label": "account"}
+{"ticket_id": "T-1021", "channel": "email", "text": "The smart fan remote does not work at all, tried new batteries. Received yesterday.", "label": "returns"}
+{"ticket_id": "T-1022", "channel": "chat", "text": "Is the 65W charger safe for my MacBook Air M3?", "label": "product"}
+{"ticket_id": "T-1023", "channel": "email", "text": "I returned the headphones two weeks ago (return label PL88213), but no refund yet and no update.", "label": "billing"}
+{"ticket_id": "T-1024", "channel": "chat", "text": "Two delivery attempts failed because I was at work. Can I collect from the hub instead?", "label": "delivery"}
+{"ticket_id": "T-1025", "channel": "email", "text": "Order says delivered but the box inside only had the charger cable, no power bank.", "label": "returns"}
+{"ticket_id": "T-1026", "channel": "app", "text": "Promo code PINTAR11 says invalid but it is still within the date on your banner.", "label": "billing"}
+{"ticket_id": "T-1027", "channel": "email", "text": "Hi, I am a Gold member. Do I still pay for return shipping for a change of mind?", "label": "returns"}
+{"ticket_id": "T-1028", "channel": "chat", "text": "My account shows someone else's address in Kuching. I live in Seremban. Was my account hacked?", "label": "account"}
+{"ticket_id": "T-1029", "channel": "email", "text": "Will the Guard camera work without a monthly subscription? Can it record to a microSD card?", "label": "product"}
+{"ticket_id": "T-1030", "channel": "chat", "text": "where is my order? ord_20788 no tracking update for 4 days", "label": "delivery"}
+{"ticket_id": "T-1031", "channel": "email", "text": "I was charged for shipping but my order was RM199, above the RM150 free shipping line.", "label": "billing"}
+{"ticket_id": "T-1032", "channel": "app", "text": "The purifier is very loud on the lowest setting, like a jet engine. Is this normal or defective? Got it last week.", "label": "returns"}
+{"ticket_id": "T-1033", "channel": "email", "text": "Please send me a tax invoice with my company name for order ord_20640, for claims.", "label": "billing"}
+{"ticket_id": "T-1034", "channel": "chat", "text": "Boleh tukar nombor telefon dalam akaun? Nombor lama dah tak guna.", "label": "account"}
+{"ticket_id": "T-1035", "channel": "email", "text": "What is the warranty on the mechanical keyboard and is it handled by you or the brand?", "label": "product"}
+{"ticket_id": "T-1036", "channel": "chat", "text": "Parcel shows Out for delivery since morning, it is 9pm now. Will it still come today?", "label": "delivery"}
+{"ticket_id": "T-1037", "channel": "email", "text": "The monitor has 3 dead pixels in the center. Arrived 5 days ago. Photos attached.", "label": "returns"}
+{"ticket_id": "T-1038", "channel": "app", "text": "Double charged AND the item is late. Order ord_20931. Fix the money first please.", "label": "billing"}
+{"ticket_id": "T-1039", "channel": "email", "text": "Saya nak pulangkan kipas, tidak sesuai dengan bilik. Belum guna, kotak masih elok. Dibeli 3 minggu lepas.", "label": "returns"}
+{"ticket_id": "T-1040", "channel": "chat", "text": "I keep getting logged out every few minutes on the website.", "label": "account"}
+{"ticket_id": "T-1041", "channel": "email", "text": "Is the air fryer basket dishwasher safe? And what is the actual capacity for chicken wings?", "label": "product"}
+{"ticket_id": "T-1042", "channel": "chat", "text": "the courier left my parcel at the wrong block, someone else signed. ord_20903", "label": "delivery"}
+{"ticket_id": "T-1043", "channel": "email", "text": "I paid with FPX, the bank shows debited, but your app says payment failed. Order not created.", "label": "billing"}
+{"ticket_id": "T-1044", "channel": "app", "text": "Can you combine my two orders into one shipment? Both still processing.", "label": "delivery"}
+{"ticket_id": "T-1045", "channel": "email", "text": "My earbuds were opened but I simply do not like the sound. Can I return them?", "label": "returns"}
+{"ticket_id": "T-1046", "channel": "chat", "text": "Forgot password link expired before I could click it. Twice.", "label": "account"}
+{"ticket_id": "T-1047", "channel": "email", "text": "Do you deliver to Labuan, and how long does it take?", "label": "delivery"}
+{"ticket_id": "T-1048", "channel": "app", "text": "The Glow bulbs do not show up in the app pairing screen. Tried 2.4GHz Wi-Fi too.", "label": "product"}
+{"ticket_id": "T-1049", "channel": "email", "text": "I was refunded RM86.70 but the item cost RM289. Why only partial?", "label": "billing"}
+{"ticket_id": "T-1050", "channel": "chat", "text": "Box was soaking wet when delivered and the kettle inside has rust spots. Received today.", "label": "returns"}
+{"ticket_id": "T-1051", "channel": "email", "text": "Can I change my order from the 1.5L blender to the larger model before it ships?", "label": "delivery"}
+{"ticket_id": "T-1052", "channel": "app", "text": "Two-factor authentication: how do I switch from SMS to an authenticator app?", "label": "account"}
+{"ticket_id": "T-1053", "channel": "email", "text": "Which power bank can I bring on a plane? Is 20000mAh allowed on AirAsia?", "label": "product"}
+{"ticket_id": "T-1054", "channel": "chat", "text": "Parcel returned to sender after failed attempts. I want my money back for the speaker.", "label": "returns"}
+{"ticket_id": "T-1055", "channel": "email", "text": "I see a pending charge of RM499 from Pintar but I cancelled the checkout. Will it go away?", "label": "billing"}
+{"ticket_id": "T-1056", "channel": "chat", "text": "Dah 6 hari lepas tarikh janji, barang belum sampai. Ada pampasan tak?", "label": "delivery"}
+{"ticket_id": "T-1057", "channel": "email", "text": "I bought the dock for my work laptop. Will it run two external monitors on Windows?", "label": "product"}
+{"ticket_id": "T-1058", "channel": "app", "text": "Merge my old account with my new one? I have order history on the old email.", "label": "account"}
+{"ticket_id": "T-1059", "channel": "email", "text": "Item received is a used unit: scratches and someone else's fingerprints on the screen. Unacceptable.", "label": "returns"}
+{"ticket_id": "T-1060", "channel": "chat", "text": "Card was charged in USD instead of MYR?? Statement shows USD 64.11 for my order.", "label": "billing"}

@@ -1,0 +1,15 @@
+$ python check_setup.py
+Python and packages
+  [ok]   Python 3.14
+  [ok]   anthropic
+  [ok]   claude-agent-sdk
+  [ok]   pydantic-ai-slim
+  [ok]   python-dotenv
+  [ok]   pytest
+API key
+  [fix]  No ANTHROPIC_API_KEY
+         Paste the class key into .env (SETUP.md, step 4). Until then, read the recorded runs in recorded_runs/.
+Claude Code
+  [info] Claude Code is not installed. It is needed for the Claude Code demos only. See SETUP.md, step 5.
+
+Fix the items marked [fix], then run this check again.

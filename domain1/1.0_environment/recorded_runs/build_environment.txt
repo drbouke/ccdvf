@@ -1,0 +1,11 @@
+PS> python --version
+Python 3.14.0
+PS> python -m venv .venv
+PS> .venv\Scripts\Activate.ps1
+(.venv) PS> pip install -r requirements.txt
+(.venv) PS> pip list
+anthropic 2.4.0
+claude-agent-sdk 0.2.177
+pydantic-ai-slim 2.65.0
+pytest 9.2.0
+python-dotenv 1.2.4

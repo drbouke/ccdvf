@@ -1,0 +1,16 @@
+$ python check_setup.py --ping
+Python and packages
+  [ok]   Python 3.14
+  [ok]   anthropic
+  [ok]   claude-agent-sdk
+  [ok]   pydantic-ai-slim
+  [ok]   python-dotenv
+  [ok]   pytest
+API key
+  [ok]   ANTHROPIC_API_KEY is set: sk-ant-(the class key)
+Claude Code
+  [info] Claude Code is not installed. It is needed for the Claude Code demos only. See SETUP.md, step 5.
+Request to Claude
+  [ok]   Claude answered: Ready (19 input, 5 output tokens)
+
+Ready.

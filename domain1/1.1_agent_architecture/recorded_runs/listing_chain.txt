@@ -1,0 +1,48 @@
+Recorded run, 01 November 2026. Command: python run.py domain1/1.1_agent_architecture/listing_chain.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+=== Air Fryer XL 6L: gate passed
+**Air Fryer XL 6L (P-104)** | RM 499.00
+
+Untuk keluarga dan tukang masak di rumah yang mahu memasak hidangan dalam kuantiti besar tanpa bunyi bising di dapur.
+
+- **Bakul 6 L yang luas** muat seekor ayam 1.4 kg.
+- **Operasi lebih senyap**, dengan kipas berkadar 52 dB, lebih senyap daripada model sebelumnya.
+- **Pembersihan mudah** dengan bakul tidak melekat yang selamat untuk mesin basuh pinggan.
+
+**Spesifikasi:** 1700 W, 80 hingga 200 °C, 8 pratetap, tingkap untuk memeriksa makanan tanpa membuka penutup, jaminan 12 bulan.
+
+=== Pulse Noise-Cancelling Headphones: gate passed
+**Fon Kepala Bunyi Hingar Pulse (RM649.00)**
+
+Untuk pengguna harian dan pengembara kerap yang mahukan pengalaman mendengar yang lebih senyap dan tidak terganggu semasa dalam perjalanan.
+
+- Pembatalan bunyi bising aktif adaptif yang menyesuaikan diri untuk menyekat bunyi latar belakang.
+- Sehingga 40 jam hayat bateri dengan pembatalan bunyi bising dihidupkan, dan pengecasan pantas selama 10 minit memberikan 5 jam penggunaan.
+- Bluetooth 5.4 multipoint menyambung dua peranti serentak, dan fon kepala ini boleh dilipat ke dalam beg pengangkutan keras.
+
+**Spesifikasi:** Pembatalan bunyi bising aktif, adaptif; bateri 40 jam (pembatalan bunyi bising dihidupkan); pengecasan pantas (10 minit untuk 5 jam); Bluetooth 5.4, multipoint (dua peranti); 254 g; boleh dilipat; beg pengangkutan keras; audio USB-C; jaminan 12 bulan.
+
+=== Volt 20000mAh Power Bank: gate passed
+**Volt 20000mAh Power Bank (P-301), RM119.00**
+
+Sesuai untuk penumpang, pengembara, dan sesiapa yang mahukan telefon bertahan sepanjang hari.
+
+- Mengecas telefon kira-kira empat kali dengan satu cas penuh.
+- Output USB-C PD 30 W dan USB-A 18 W membolehkan anda mengecas dua peranti serentak.
+- Berat 395 g dan dibenarkan dibawa dalam bagasi kabin penerbangan (di bawah 100 Wh), tetapi tidak dibenarkan dalam bagasi daftar masuk.
+
+**Spesifikasi:** Kapasiti 20000 mAh (74 Wh); output USB-C PD 30 W dan USB-A 18 W; input USB-C 20 W; 395 g; jaminan 12 bulan.
+
+=== Pure Air Purifier H13: gate passed
+**Pure Air Purifier H13** (P-502), RM 899.00
+
+Untuk isi rumah di Malaysia yang mahukan udara yang lebih bersih dalam bilik sehingga 45 square meters.
+
+- Penapis True HEPA H13 menyingkirkan 99.97% zarah sekecil 0.3 microns.
+- Sensor kualiti udara PM2.5 membantu anda memantau udara yang anda sedut.
+- Mod tidur senyap 22 dB, dan pembantu yang berguna semasa musim jerebu.
+
+**Spesifikasi:** Penapis True HEPA H13; saiz bilik sehingga 45 square meters; bunyi 22 dB dalam mod tidur; sensor PM2.5; hayat penapis kira-kira 12 months; waranti 24 months. Penapis gantian dijual berasingan.
+
+8 call(s), 2,079 input + 5,929 output tokens, USD 0.00317, 29.1 s, model claude-haiku-5-5

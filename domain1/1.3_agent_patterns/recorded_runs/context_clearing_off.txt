@@ -1,0 +1,64 @@
+Recorded run, 01 November 2026. Command: python run.py domain1/1.3_agent_patterns/context_clearing.py --off
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+call input tokens  cleared
+   1          651  
+   2        1,195  
+   3        1,783  
+   4        2,267  
+   5        2,887  
+   6        3,506  
+   7        4,059  
+   8        4,560  
+   9        5,146  
+  10        5,748  
+  11        6,286  
+  12        6,774  
+  13        7,374  
+  14        7,922  
+  15        8,584  
+  16        9,167  
+  17        9,762  
+  18       10,335  
+  19       10,841  
+  20       11,347  
+  21       11,940  
+  22       12,426  
+  23       12,991  
+  24       13,491  
+  25       13,998  
+  26       14,641  
+  27       15,176  
+  28       15,714  
+  29       16,399  
+  30       16,986  
+  31       17,516  
+
+I reviewed all 30 orders. 16 have parcels held because the delivery address could not be verified:
+
+| Order | Customer | Hub |
+|---|---|---|
+| ord_20575 | C-1147 | Penang hub |
+| ord_20590 | C-1216 | Kuching hub |
+| ord_20595 | C-1179 | Kuching hub |
+| ord_20627 | C-1156 | Kota Kinabalu hub |
+| ord_20636 | C-1204 | Kota Kinabalu hub |
+| ord_20697 | C-1226 | Penang hub |
+| ord_20722 | C-1179 | Kuala Lumpur hub |
+| ord_20775 | C-1179 | Penang hub |
+| ord_20788 | C-1203 | Kuala Lumpur hub |
+| ord_20794 | C-1109 | Penang hub |
+| ord_20798 | C-1227 | Penang hub |
+| ord_20882 | C-1244 | Shah Alam hub |
+| ord_21030 | C-1145 | Kuala Lumpur hub |
+| ord_21044 | C-1219 | Penang hub |
+| ord_21108 | C-1196 | Kuching hub |
+| ord_21130 | C-1139 | Shah Alam hub |
+
+The other 14 orders are not address holds. Most show "delivery failed: recipient not available," and ord_20532, ord_20609, ord_20659, ord_20672, ord_20714, ord_20757, ord_20768, ord_20872, ord_20956, ord_21062, ord_21068, ord_21149 and ord_21151 are in that group.
+
+Two of the orders also show what look like duplicate card or e-wallet captures, which may need a look separately from the delays:
+- **ord_20636** (C-1204, held): two captures of MYR 238.00 (pay_000090 and pay_000091), about 40 seconds apart.
+- **ord_21130** (C-1139, held): two captures of MYR 1,677.00 (pay_000420 and pay_000421), about a minute apart.
+
+Clearing off: 31 call(s), 281,472 input + 3,460 output tokens, USD 0.02988, 32.9 s, model claude-haiku-5-5

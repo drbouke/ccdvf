@@ -1,0 +1,21 @@
+Recorded run, 01 November 2026. Command: python run.py domain1/1.1_agent_architecture/translate_loop.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+Round 1: accepted
+  - Glossary terms are used correctly throughout (pembatalan hingar, bateri, pengecasan pantas, waranti). All numbers (40 jam, 10 minit, 5 jam, Bluetooth 5.4, dua peranti, 254 g, 12 bulan) are preserved. The Malay reads naturally.
+  - Minor, not a glossary issue: the source says 'hard travel case', which the translation renders as 'bekas perjalanan keras'. This is an acceptable rendering. The source's 'Foldable' becomes 'Boleh dilipat', which is also accurate.
+
+Final translation:
+**Fon Kepala Pembatalan Hingar Pulse**
+
+Boleh dilipat, dilengkapi bekas perjalanan keras. Audio melalui USB-C.
+
+**Spesifikasi:**
+- **Pembatalan hingar:** Aktif, adaptif
+- **Bateri:** 40 jam dengan pembatalan hingar dihidupkan
+- **Pengecasan:** Pengecasan pantas, 10 minit untuk 5 jam penggunaan
+- **Sambungan:** Bluetooth 5.4, multipoint (dua peranti)
+- **Berat:** 254 g
+- **Waranti:** 12 bulan
+
+2 call(s), 1,492 input + 1,040 output tokens, USD 0.00067, 5.5 s, model claude-haiku-5-5

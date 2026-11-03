@@ -1,0 +1,17 @@
+$ python check_setup.py --ping
+Python and packages
+  [ok]   Python 3.14
+  [ok]   anthropic
+  [ok]   claude-agent-sdk
+  [ok]   pydantic-ai-slim
+  [ok]   python-dotenv
+  [ok]   pytest
+API key
+  [ok]   ANTHROPIC_API_KEY is set: sk-ant-wrong-key
+Claude Code
+  [info] Claude Code is not installed. It is needed for the Claude Code demos only. See SETUP.md, step 5.
+Request to Claude
+  [fix]  The request failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CgfFfJ5qRd6W1rmgZEehi'}
+         Check the key, the credit balance and the spend limit in the Claude Console.
+
+Fix the items marked [fix], then run this check again.

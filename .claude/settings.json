@@ -1,0 +1,3 @@
+{
+  "apiKeyHelper": "python .claude/env_key.py || python3 .claude/env_key.py"
+}

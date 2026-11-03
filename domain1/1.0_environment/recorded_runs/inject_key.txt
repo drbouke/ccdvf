@@ -1,0 +1,6 @@
+$ python domain1/1.0_environment/inject_key.py
+1 before load_dotenv: None
+2 after load_dotenv:  sk-ant-(the class key)
+3 client.api_key:     sk-ant-(the class key) ...
+4 request header:     Bearer sk-ant-(the class key) ...
+5 Claude answered:    Ready
