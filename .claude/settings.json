@@ -1,3 +1,4 @@
 {
-  "apiKeyHelper": "python .claude/env_key.py || python3 .claude/env_key.py"
+  "apiKeyHelper": "python .claude/env_key.py || python3 .claude/env_key.py",
+  "model": "claude-haiku-5-5"
 }

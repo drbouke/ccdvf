@@ -69,7 +69,7 @@ Everyone holding the course key can see files uploaded through the API with it, 
 
 ## Step 5. Claude Code
 
-The Claude Code extension takes the course key from `.env` through the `.claude/settings.json` file, so it requires no sign-in.
+The Claude Code extension takes the course key from `.env` through the `.claude/settings.json` file, so it requires no sign-in. The same file sets Claude Haiku 5.5 as the default model, the lowest-cost option, and the model menu in the panel can change it.
 
 1. After saving `.env`, press **F1** and run **Developer: Reload Window**.
 2. Open Claude Code from its icon.
