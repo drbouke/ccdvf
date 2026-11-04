@@ -1,9 +1,9 @@
 """The tool-use round trip, request by request: what each request sends, why each response stopped, and how every
-tool_result answers a tool_use by its id. The question is about Ravi's monitor, held at a courier hub."""
+tool_result answers a tool_use by its id. The question is about Ryan's monitor, held at a courier hub."""
 import json
 import anthropic
 from meter import Meter, text
-from pintar_tools import TOOLS, run_tool
+from store_tools import TOOLS, run_tool
 
 MODEL = "claude-haiku-5-5"
 client = anthropic.Anthropic()

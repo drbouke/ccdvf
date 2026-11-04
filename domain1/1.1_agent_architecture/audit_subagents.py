@@ -6,16 +6,16 @@ import json
 import sqlite3
 from claude_agent_sdk import (AgentDefinition, AssistantMessage, ClaudeAgentOptions, ResultMessage,
                               ToolUseBlock, create_sdk_mcp_server, query, tool)
-from pintar_tools import DB, get_order
+from store_tools import DB, get_order
 
 
 @tool("find_duplicate_charges", "List the orders whose payment was captured more than once.", {})
 async def duplicates_tool(args):
     with sqlite3.connect(DB) as con:
-        rows = con.execute("SELECT order_id, COUNT(*), SUM(amount_myr) FROM payments WHERE status = 'captured' "
+        rows = con.execute("SELECT order_id, COUNT(*), SUM(amount) FROM payments WHERE status = 'captured' "
                            "GROUP BY order_id HAVING COUNT(*) > 1 ORDER BY order_id").fetchall()
     return {"content": [{"type": "text", "text": json.dumps(
-        [{"order_id": o, "captures": n, "captured_myr": round(t, 2)} for o, n, t in rows])}]}
+        [{"order_id": o, "captures": n, "captured": round(t, 2)} for o, n, t in rows])}]}
 
 
 @tool("get_order", "Full record of one order: items, payments, shipment, tracking and refunds.", {"order_id": str})
@@ -35,7 +35,7 @@ auditor = AgentDefinition(
     model="claude-haiku-5-5")
 options = ClaudeAgentOptions(
     model="claude-haiku-5-5",
-    system_prompt=("You lead a payments audit at Pintar. Find the orders "
+    system_prompt=("You lead a payments audit at Acme. Find the orders "
                    "charged more than once, give each order to the "
                    "order-auditor subagent, then write one table: order, "
                    "extra amount, refunded or not, delivery status, action "

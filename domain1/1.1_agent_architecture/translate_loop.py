@@ -1,9 +1,9 @@
-"""Evaluator-optimizer: one call translates a listing into Malay, a second call reviews it against the Pintar
+"""Evaluator-optimizer: one call translates a listing into French, a second call reviews it against the Acme
 glossary and the facts, and the loop repeats with the feedback until the reviewer accepts (at most 3 rounds)."""
 import json
 import anthropic
 from meter import Meter, text
-from pintar_tools import DATA
+from store_tools import DATA
 
 MODEL = "claude-haiku-5-5"
 GLOSSARY = json.loads((DATA / "glossary.json").read_text(encoding="utf-8"))
@@ -11,7 +11,7 @@ VERDICT = {"name": "verdict", "description": "Review result.",
            "input_schema": {"type": "object", "properties": {
                "accept": {"type": "boolean"},
                "issues": {"type": "array", "items": {"type": "string"},
-                          "description": "Each problem to fix: wrong glossary term, changed fact, unnatural Malay"}},
+                          "description": "Each problem to fix: wrong glossary term, changed fact, unnatural French"}},
                "required": ["accept", "issues"]}}
 client = anthropic.Anthropic()
 meter = Meter(MODEL)
@@ -21,7 +21,7 @@ source = f"{product['name']}. {product['notes']} Specs: " + "; ".join(f"{k}: {v}
 feedback, draft = "", ""
 for round_no in range(1, 4):
     terms = json.dumps(GLOSSARY, ensure_ascii=False)
-    ask = ("Translate this product text into natural Bahasa Malaysia for "
+    ask = ("Translate this product text into natural French for "
            f"an online store. Required terms: {terms}\n\nText: {source}")
     if feedback:
         ask += (f"\n\nYour previous draft:\n{draft}\n\n"
@@ -33,7 +33,7 @@ for round_no in range(1, 4):
         model=MODEL, max_tokens=2500, tools=[VERDICT],
         tool_choice={"type": "tool", "name": "verdict"},
         messages=[{"role": "user", "content":
-                   "Review this Malay translation strictly. It must use "
+                   "Review this French translation strictly. It must use "
                    "the glossary terms where the concept appears, keep every "
                    "number and fact, and read naturally.\n"
                    f"Glossary: {terms}\n"

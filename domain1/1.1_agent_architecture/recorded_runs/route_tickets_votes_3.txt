@@ -1,16 +1,15 @@
-Recorded run, 01 November 2026. Command: python run.py domain1/1.1_agent_architecture/route_tickets.py --votes 3
+Recorded run, 04 November 2026. Command: python run.py domain1/1.1_agent_architecture/route_tickets.py --votes 3
 Real output from the Claude API; model output varies from run to run.
 ==============================================================================
-Accuracy with 3 vote(s) per ticket: 58/60 = 97%
+Accuracy with 3 vote(s) per ticket: 59/60 = 98%
 
   billing   12/13
   delivery  13/13
   returns   14/14
-  product   9/10
+  product   10/10
   account   10/10
 
 Misrouted:
   T-1023 expected billing, got returns votes {'returns': 3}: I returned the headphones two weeks ago (return label PL88213), but no
-  T-1048 expected product, got account votes {'account': 3}: The Glow bulbs do not show up in the app pairing screen. Tried 2.4GHz 
 
-180 call(s), 142,899 input + 15,886 output tokens, USD 0.02223, 30.3 s, model claude-haiku-5-5
+180 call(s), 142,470 input + 15,761 output tokens, USD 0.02213, 29.7 s, model claude-haiku-5-5

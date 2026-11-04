@@ -1,4 +1,4 @@
-"""Pintar support tools over data/pintar.db and data/refund_policy.md.
+"""Acme support tools over data/store.db and data/refund_policy.md.
 
 TOOLS holds the definitions Claude sees (name, description, input schema); run_tool() runs the one Claude asks for and
 returns text. Claude never touches the database: it can only ask, and this code decides what to return.
@@ -9,7 +9,7 @@ import sqlite3
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parent.parent / 'data'
-DB = DATA / 'pintar.db'
+DB = DATA / 'store.db'
 POLICY = (DATA / 'refund_policy.md').read_text(encoding='utf-8')
 
 TOOLS = [
@@ -26,7 +26,7 @@ TOOLS = [
                       "properties": {"order_id": {"type": "string",
                                      "description": "For example ord_20931"}}}},
     {"name": "search_policy",
-     "description": "Search the Pintar returns, refunds and delivery "
+     "description": "Search the Acme returns, refunds and delivery "
                     "policy. Returns the matching sections with their numbers.",
      "input_schema": {"type": "object", "required": ["query"], "properties": {
          "query": {"type": "string",
@@ -49,7 +49,7 @@ def find_customer(query):
     if not found:
         return 'No customer matches %r.' % q
     c = found[0]
-    c['recent_orders'] = _rows('SELECT order_id, placed_at, status, total_myr FROM orders WHERE customer_id = ? '
+    c['recent_orders'] = _rows('SELECT order_id, placed_at, status, total FROM orders WHERE customer_id = ? '
                                'ORDER BY placed_at DESC LIMIT 5', (c['customer_id'],))
     return json.dumps(c)
 
@@ -59,12 +59,12 @@ def get_order(order_id):
     if not order:
         return 'Order %s not found.' % order_id
     o = order[0]
-    o['items'] = _rows('SELECT i.product_id, p.name, i.qty, i.unit_price_myr FROM order_items i JOIN products p USING (product_id) '
+    o['items'] = _rows('SELECT i.product_id, p.name, i.qty, i.unit_price FROM order_items i JOIN products p USING (product_id) '
                        'WHERE i.order_id = ?', (o['order_id'],))
-    o['payments'] = _rows('SELECT payment_id, method, amount_myr, status, paid_at FROM payments WHERE order_id = ? ORDER BY paid_at', (o['order_id'],))
+    o['payments'] = _rows('SELECT payment_id, method, amount, status, paid_at FROM payments WHERE order_id = ? ORDER BY paid_at', (o['order_id'],))
     o['shipment'] = (_rows('SELECT courier, tracking_no, shipped_at, promised_by FROM shipments WHERE order_id = ?', (o['order_id'],)) or [None])[0]
     o['tracking'] = _rows('SELECT at, location, event FROM tracking_events WHERE order_id = ? ORDER BY at', (o['order_id'],))
-    o['refunds'] = _rows('SELECT refund_id, amount_myr, reason, status, created_at FROM refunds WHERE order_id = ?', (o['order_id'],))
+    o['refunds'] = _rows('SELECT refund_id, amount, reason, status, created_at FROM refunds WHERE order_id = ?', (o['order_id'],))
     return json.dumps(o)
 
 

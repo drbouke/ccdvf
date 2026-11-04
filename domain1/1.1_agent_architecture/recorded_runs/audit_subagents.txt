@@ -1,32 +1,32 @@
-Recorded run, 01 November 2026. Command: python run.py domain1/1.1_agent_architecture/audit_subagents.py
+Recorded run, 04 November 2026. Command: python run.py domain1/1.1_agent_architecture/audit_subagents.py
 Real output from the Claude API; model output varies from run to run.
 ==============================================================================
-All 16 orders listed as double-captured are confirmed duplicates. Together they hold **MYR 9,925.00** in extra charges, and none has been refunded yet.
+All 16 orders with two captures are audited, and every one is a true duplicate: the customer paid the order total twice, and no refund is recorded on any of them. The total extra amount still owed to customers is **9,925** (currency isn't labelled in the store output; the auditor reports used "$" for some orders, so treat the figures as the store's units). The sum of the extras matches the store's captured totals exactly (19,850 captured, half of which is 9,925), so the arithmetic checks out.
 
-| Order | Extra amount (MYR) | Refunded | Delivery status | Action needed |
+| Order | Extra amount | Refunded | Delivery status | Action needed |
 |---|---|---|---|---|
-| ord_20513 | 198.00 | No | Delivered 2026-09-07 (Ninja Van) | Refund pay_000009 (198.00) |
-| ord_20636 | 238.00 | No | Delayed, held at Kota Kinabalu hub since 2026-09-25 ("address could not be verified"), order still open | Confirm address with customer C-1204, then redeliver or refund. Refund pay_000091 (238.00). The hold location is far from the Petaling Jaya ship city, so check the routing. |
-| ord_20931 | 289.00 | No | Delivered 2026-10-27 (J&T) | Refund pay_920932 (289.00) and confirm the capture is voided with the processor |
-| ord_20935 | 278.00 | No | Delivered 2026-10-18 (J&T) | Refund pay_000291 (278.00) |
-| ord_21130 | 1,677.00 | No | Delayed, held at Shah Alam hub since 2026-09-10 for an unverified Kuching address, past promised date | Contact customer C-1139 to verify the address or cancel. Refund pay_000421 (1,677.00). |
-| ord_21207 | 778.00 | No | Delivered 2026-09-14 (PosLaju) | Refund pay_000471 (778.00) |
-| ord_21295 | 398.00 | No | Delivered 2026-10-22 (Seremban) | Refund pay_000531 (398.00) |
-| ord_21298 | 258.00 | No | Delivery failed 2026-10-04 ("recipient not available"), no later tracking | Refund pay_000533 (258.00). Contact customer to reschedule delivery. |
-| ord_21343 | 1,036.00 | No | Delivered 2026-08-24 (DHL) | Refund pay_000563 (1,036.00) |
-| ord_21470 | 289.00 | No | Delivered 2026-09-22 (Penang) | Refund one of pay_000646 or pay_000647 (289.00). The auditor suggests pay_000647, the later record. |
-| ord_21550 | 507.00 | No | Delivered 2026-08-04 (DHL, Penang) | Refund pay_000701 (507.00) |
-| ord_21558 | 229.00 | No | Delivered 2026-08-31 (Ninja Van, Penang) | Refund pay_000705 (229.00) after confirming with the customer |
-| ord_21656 | 528.00 | No | Delayed, held at Kuching hub since 2026-10-29 for an unverified address, promised date 2026-10-31 passed | Contact customer C-1155 to verify the address. Refund pay_000771 (528.00). |
-| ord_21865 | 238.00 | No | Delivered 2026-10-08 (DHL) | Refund pay_000911 (238.00) after confirming with customer C-1185 |
-| ord_21982 | 1,686.00 | No | Delivered 2026-09-18 (J&T) | Refund pay_000989 (1,686.00) |
-| ord_21985 | 1,298.00 | No | Delivered 2026-08-16 (PosLaju) | Refund pay_000991 (1,298.00) |
+| ord_20513 | 198 | No | Delivered 2026-09-07 (ParcelOne) | Refund pay_000009 (198) |
+| ord_20636 | 238 | No | Stuck at Bayview hub since 2026-09-25, address unverified, not delivered, 10 days late | Refund pay_000091 (238), verify address with customer |
+| ord_20931 | 289 | No | Delivered 2026-10-27 (QuickParcel) | Refund pay_920932 (289) |
+| ord_20935 | 278 | No | Delivered 2026-10-18 (QuickParcel) | Refund pay_000291 (278) |
+| ord_21130 | 1,677 | No | Delayed, held at Eastside hub since 2026-09-10, address unverified, about 53 days overdue | Refund pay_000421 (1,677), resolve address hold with customer or courier |
+| ord_21207 | 778 | No | Delivered 2026-09-14 (FastShip) | Refund pay_000471 (778) |
+| ord_21295 | 398 | No | Delivered 2026-10-22 (QuickParcel) | Refund pay_000531 (398) |
+| ord_21298 | 258 | No | Delivery failed 2026-10-04 (recipient unavailable), still marked delayed | Refund pay_000533 (258), arrange redelivery |
+| ord_21343 | 1,036 | No | Delivered 2026-08-24 (Global Express) | Refund pay_000563 (1,036) |
+| ord_21470 | 289 | No | Delivered 2026-09-22 (QuickParcel) | Refund pay_000647 (289) |
+| ord_21550 | 507 | No | Delivered 2026-08-04 (Global Express) | Refund pay_000701 (507) |
+| ord_21558 | 229 | No | Delivered 2026-08-31 (ParcelOne) | Refund pay_000705 (229) |
+| ord_21656 | 528 | No | Delayed, held at Midtown hub since 2026-10-29, address unverified, past promised date | Refund pay_000771 (528), verify address so shipment GL455303928 can be released |
+| ord_21865 | 238 | No | Delivered 2026-10-08 (Global Express) | Refund pay_000911 (238) |
+| ord_21982 | 1,686 | No | Delivered 2026-09-18 (QuickParcel) | Refund pay_000989 (1,686) |
+| ord_21985 | 1,298 | No | Delivered 2026-08-16 (FastShip) | Refund pay_000991 (1,298) |
 
-**Total extra amount still owed to customers: MYR 9,925.00** across 16 orders. The store list's captured totals (MYR 19,850.00) are exactly double the order totals, which reconciles to this figure.
+**Total extra amount still owed to customers: 9,925**
 
 Notes:
-- The auditors had read-only access and no refund tool, so no refunds were issued. Each refund has to be made in the payment system.
-- Four orders (ord_20636, ord_21130, ord_21298, ord_21656) have delivery problems. The customer may need a redelivery or a cancellation, so the refund decision for those should be checked with the customer first. The money is owed either way.
-- The payment IDs for ord_20931 (pay_920931/pay_920932) follow a different numbering pattern from the others, so confirm them against the processor before refunding.
+- The auditor reports give the payment IDs. I checked the amounts against the store's captured totals, but I did not open the full order records myself, so the payment IDs are as the subagents reported them.
+- Four orders need more than a refund because the parcel is stuck or failed: ord_20636, ord_21130, ord_21298 and ord_21656. For these, the refund should go out with an address check or redelivery, so the customer is not left with a late order and no recourse.
+- I have only read access to the store, so I could not issue the refunds. Each one needs to be processed in the payment system.
 
-[16 subagent tasks, 19 lead turns, USD 0.0322]
+[16 subagent tasks, 19 lead turns, USD 0.0325]

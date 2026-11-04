@@ -10,7 +10,7 @@ import sqlite3
 import sys
 import anthropic
 from meter import Meter, text
-from pintar_tools import DB, TOOLS, run_tool
+from store_tools import DB, TOOLS, run_tool
 
 MODEL = "claude-haiku-5-5"
 with sqlite3.connect(DB) as con:

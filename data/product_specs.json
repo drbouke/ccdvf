@@ -1,18 +1,18 @@
 [
- {"product_id": "P-104", "name": "Air Fryer XL 6L", "price_myr": 499.00,
+ {"product_id": "P-104", "name": "Air Fryer XL 6L", "price": 499.00,
   "specs": {"capacity": "6 L basket, fits a 1.4 kg chicken", "power": "1700 W", "temperature": "80 to 200 C",
             "presets": 8, "basket": "non-stick, dishwasher safe", "warranty": "12 months"},
   "notes": "Quieter fan than the previous model (52 dB). Window to check food without opening."},
- {"product_id": "P-202", "name": "Pulse Noise-Cancelling Headphones", "price_myr": 649.00,
+ {"product_id": "P-202", "name": "Pulse Noise-Cancelling Headphones", "price": 649.00,
   "specs": {"noise cancelling": "active, adaptive", "battery": "40 hours with noise cancelling on", "charging": "fast charging, 10 minutes for 5 hours",
             "connection": "Bluetooth 5.4, multipoint (two devices)", "weight": "254 g", "warranty": "12 months"},
   "notes": "Foldable, with a hard travel case. USB-C audio."},
- {"product_id": "P-301", "name": "Volt 20000mAh Power Bank", "price_myr": 119.00,
+ {"product_id": "P-301", "name": "Volt 20000mAh Power Bank", "price": 119.00,
   "specs": {"capacity": "20000 mAh (74 Wh)", "output": "USB-C PD 30 W, USB-A 18 W", "input": "USB-C 20 W",
             "weight": "395 g", "airline": "under 100 Wh, allowed in cabin baggage", "warranty": "12 months"},
   "notes": "Charges a phone about four times. Not allowed in checked baggage."},
- {"product_id": "P-502", "name": "Pure Air Purifier H13", "price_myr": 899.00,
+ {"product_id": "P-502", "name": "Pure Air Purifier H13", "price": 899.00,
   "specs": {"filter": "true HEPA H13, removes 99.97% of particles of 0.3 microns", "room size": "up to 45 square meters",
             "noise": "22 dB in sleep mode", "sensor": "PM2.5 air quality sensor", "filter life": "about 12 months", "warranty": "24 months"},
-  "notes": "Useful during the haze season. Replacement filters sold separately."}
+  "notes": "Useful during the allergy season. Replacement filters sold separately."}
 ]

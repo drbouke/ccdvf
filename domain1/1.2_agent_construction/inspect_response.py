@@ -2,14 +2,14 @@
 (a thinking block can come before the text), stop_reason and the token usage."""
 import json
 import anthropic
-from pintar_tools import DATA, POLICY
+from store_tools import DATA, POLICY
 
 ticket = json.loads((DATA / "tickets.jsonl").read_text(encoding="utf-8").splitlines()[0])
 client = anthropic.Anthropic()
 resp = client.messages.create(
     model="claude-haiku-5-5",
     max_tokens=1200,
-    system="You are a Pintar customer service team lead. Apply only this policy:\n\n" + POLICY,
+    system="You are an Acme customer service team lead. Apply only this policy:\n\n" + POLICY,
     messages=[{"role": "user", "content": "Triage this ticket in two sentences: category, urgency "
                "and the next step.\n\n" + ticket["text"]}],
 )

@@ -10,7 +10,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 import anthropic
 from meter import Meter
-from pintar_tools import DATA
+from store_tools import DATA
 
 MODEL = "claude-haiku-5-5"
 QUEUES = ["billing", "delivery", "returns", "product", "account"]
@@ -19,7 +19,7 @@ ROUTE = {"name": "route", "description": "Send the ticket to exactly one queue."
                           "properties": {"queue": {"type": "string", "enum": QUEUES},
                                          "reason": {"type": "string", "description": "One short sentence"}},
                           "required": ["queue", "reason"]}}
-SYSTEM = """You route Pintar customer tickets to one queue.
+SYSTEM = """You route Acme customer tickets to one queue.
 billing: charges, duplicate or wrong amounts, refunds already approved but not received, invoices, promo codes, failed payments
 delivery: where is my order, delays, failed or wrong deliveries, address or order changes before dispatch, shipping options
 returns: damaged, defective, wrong, used or unwanted items the customer wants to return, replace or get money back for

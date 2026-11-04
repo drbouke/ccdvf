@@ -1,13 +1,13 @@
 """Prompt chaining with a gate: Claude drafts an English product listing from the specs, your code checks it, and only
-a listing that passes goes on to the Malay translation."""
+a listing that passes goes on to the French translation."""
 import json
 import re
 import anthropic
 from meter import Meter, text
-from pintar_tools import DATA
+from store_tools import DATA
 
 MODEL = "claude-haiku-5-5"
-BANNED = ["best", "guaranteed", "100%", "perfect", "number one"]   # claims Pintar may not make
+BANNED = ["best", "guaranteed", "100%", "perfect", "number one"]   # claims Acme may not make
 client = anthropic.Anthropic()
 meter = Meter(MODEL)
 
@@ -33,7 +33,7 @@ def gate(text, product):
 
 specs = (DATA / "product_specs.json").read_text(encoding="utf-8")
 for product in json.loads(specs):
-    draft = ask("Write a product listing for an online store in Malaysia, "
+    draft = ask("Write a product listing for an online store, "
                 "at most 110 words: one line on who it is for, three "
                 "benefits as bullets, and a specs line that includes the "
                 f"warranty. Use only these facts:\n{json.dumps(product)}")
@@ -43,8 +43,8 @@ for product in json.loads(specs):
     if problems:
         print(draft + "\n")
         continue
-    malay = ask("Translate this product listing into Bahasa Malaysia for "
-                "Malaysian shoppers. Keep the bullets, numbers and units "
+    french = ask("Translate this product listing into French for "
+                "French shoppers. Keep the bullets, numbers and units "
                 "exactly.\n\n" + draft)
-    print(malay + "\n")
+    print(french + "\n")
 print(meter.report())

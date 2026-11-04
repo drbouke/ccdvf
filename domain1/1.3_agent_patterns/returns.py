@@ -6,14 +6,14 @@ import sqlite3
 from typing import Literal
 from pydantic import BaseModel, Field
 from pydantic_ai import Agent
-from pintar_tools import DB, POLICY, get_order
+from store_tools import DB, POLICY, get_order
 
 
 class ReturnDecision(BaseModel):
     order_id: str
     decision: Literal["refund", "replace_or_refund", "refuse",
                       "needs_team_lead"]
-    refund_myr: float = Field(
+    refund: float = Field(
         ge=0, description="Amount the policy allows, 0 if refused")
     policy_sections: list[str] = Field(
         description="For example ['2.1', '2.2']")
@@ -22,7 +22,7 @@ class ReturnDecision(BaseModel):
 
 
 agent = Agent("anthropic:claude-haiku-5-5", output_type=ReturnDecision,
-              instructions="Decide Pintar return requests strictly by this "
+              instructions="Decide Acme return requests strictly by this "
                            "policy. Today is 1 November 2026.\n\n" + POLICY)
 
 
@@ -50,7 +50,7 @@ REQUESTS = [
     (old, "I would like to return this order, I no longer need it. Everything is unused."),
 ]
 
-print(f"{'order':10} {'decision':18} {'MYR':>8}  {'policy':10} reason")
+print(f"{'order':10} {'decision':18} {'Amount':>8}  {'policy':10} reason")
 for order_id, message in REQUESTS:
     d = agent.run_sync(f"Order {order_id}. Customer message: {message}").output
-    print(f"{d.order_id:10} {d.decision:18} {d.refund_myr:>8.2f}  {','.join(d.policy_sections):10} {d.reason}")
+    print(f"{d.order_id:10} {d.decision:18} {d.refund:>8.2f}  {','.join(d.policy_sections):10} {d.reason}")

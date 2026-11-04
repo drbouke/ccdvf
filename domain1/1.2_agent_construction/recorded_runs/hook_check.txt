@@ -1,6 +1,6 @@
-Recorded run, 01 November 2026. Command: python run.py domain1/1.2_agent_construction/hook_check.py
+Recorded run, 04 November 2026. Command: python run.py domain1/1.2_agent_construction/hook_check.py
 Real output from the Claude API; model output varies from run to run.
 ==============================================================================
-ord_20931  MYR  289.00  duplicate charge      -> allowed
-ord_21500  MYR  899.00  damaged on arrival    -> Team lead approval needed: above MYR 500
-ord_20568  MYR   50.00  goodwill credit       -> Team lead approval needed: a second refund
+ord_20931  $ 289.00  duplicate charge      -> allowed
+ord_21500  $ 899.00  damaged on arrival    -> Team lead approval needed: above $500
+ord_20568  $  50.00  goodwill credit       -> Team lead approval needed: a second refund

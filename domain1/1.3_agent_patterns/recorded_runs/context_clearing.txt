@@ -1,70 +1,66 @@
-Recorded run, 01 November 2026. Command: python run.py domain1/1.3_agent_patterns/context_clearing.py
+Recorded run, 04 November 2026. Command: python run.py domain1/1.3_agent_patterns/context_clearing.py
 Real output from the Claude API; model output varies from run to run.
 ==============================================================================
 call input tokens  cleared
    1          651  
-   2        1,195  
-   3        1,783  
-   4        2,267  
-   5        2,889  
-   6        3,508  
-   7        4,061  
-   8        4,562  
-   9        5,148  
-  10        5,772  
-  11        6,310  
-  12        6,798  
-  13        7,476  
-  14        3,456  10 tool results (4,547 tokens)
-  15        4,118  10 tool results (4,562 tokens)
-  16        4,701  10 tool results (4,569 tokens)
-  17        5,296  10 tool results (4,578 tokens)
-  18        5,878  10 tool results (4,585 tokens)
-  19        6,384  10 tool results (4,588 tokens)
-  20        6,890  10 tool results (4,588 tokens)
-  21        7,561  10 tool results (4,498 tokens)
-  22        4,817  18 tool results (8,404 tokens)
-  23        5,382  18 tool results (8,415 tokens)
-  24        5,882  18 tool results (8,416 tokens)
-  25        6,389  18 tool results (8,421 tokens)
-  26        7,110  18 tool results (8,329 tokens)
-  27        5,831  23 tool results (10,648 tokens)
-  28        6,369  23 tool results (10,648 tokens)
-  29        7,132  23 tool results (10,566 tokens)
-  30        7,669  23 tool results (10,566 tokens)
-  31        6,227  27 tool results (12,518 tokens)
-  32        7,129  27 tool results (12,370 tokens)
-  33        7,651  27 tool results (12,370 tokens)
+   2        1,193  
+   3        1,804  
+   4        2,310  
+   5        2,949  
+   6        3,562  
+   7        4,112  
+   8        4,620  
+   9        5,181  
+  10        5,822  
+  11        6,365  
+  12        6,876  
+  13        7,557  
+  14        3,758  10 tool results (4,247 tokens)
+  15        4,485  10 tool results (4,252 tokens)
+  16        5,072  10 tool results (4,260 tokens)
+  17        5,684  10 tool results (4,269 tokens)
+  18        6,349  10 tool results (4,269 tokens)
+  19        6,882  10 tool results (4,271 tokens)
+  20        7,495  10 tool results (4,185 tokens)
+  21        5,336  17 tool results (7,452 tokens)
+  22        5,835  17 tool results (7,447 tokens)
+  23        6,396  17 tool results (7,452 tokens)
+  24        6,978  17 tool results (7,352 tokens)
+  25        6,210  21 tool results (9,096 tokens)
+  26        6,950  21 tool results (9,018 tokens)
+  27        7,074  23 tool results (9,846 tokens)
+  28        7,635  24 tool results (10,253 tokens)
+  29        8,170  25 tool results (10,879 tokens)
+  30        8,364  26 tool results (11,306 tokens)
+  31        8,479  27 tool results (11,733 tokens)
 
-All 30 orders are reviewed. 16 have parcels held because the delivery address could not be verified:
+I checked all 30 orders. 16 are held because the delivery address could not be verified. The other 14 are failed deliveries (recipient not available).
+
+**Address-verification holds (16):**
 
 | Order | Customer | Hub |
 |---|---|---|
-| ord_20575 | C-1147 | Penang |
-| ord_20590 | C-1216 | Kuching |
-| ord_20595 | C-1179 | Kuching |
-| ord_20627 | C-1156 | Kota Kinabalu |
-| ord_20636 | C-1204 | Kota Kinabalu |
-| ord_20697 | C-1226 | Penang |
-| ord_20722 | C-1179 | Kuala Lumpur |
-| ord_20775 | C-1179 | Penang |
-| ord_20788 | C-1203 | Kuala Lumpur |
-| ord_20794 | C-1109 | Penang |
-| ord_20798 | C-1227 | Penang |
-| ord_20882 | C-1244 | Shah Alam |
-| ord_21030 | C-1145 | Kuala Lumpur |
-| ord_21044 | C-1219 | Penang |
-| ord_21108 | C-1196 | Kuching |
-| ord_21130 | C-1139 | Shah Alam |
+| ord_20575 | C-1147 | Lakeside |
+| ord_20590 | C-1216 | Midtown |
+| ord_20595 | C-1179 | Midtown |
+| ord_20627 | C-1156 | Bayview |
+| ord_20636 | C-1204 | Bayview |
+| ord_20697 | C-1226 | Lakeside |
+| ord_20722 | C-1179 | Central |
+| ord_20775 | C-1179 | Lakeside |
+| ord_20788 | C-1203 | Central |
+| ord_20794 | C-1109 | Lakeside |
+| ord_20798 | C-1227 | Lakeside |
+| ord_20882 | C-1244 | Eastside |
+| ord_21030 | C-1145 | Central |
+| ord_21044 | C-1219 | Lakeside |
+| ord_21108 | C-1196 | Midtown |
+| ord_21130 | C-1139 | Eastside |
 
-Customer C-1179 has three held orders (ord_20595, ord_20722, ord_20775), so one address issue may affect several parcels.
+**Things to look at:**
+- **C-1179** has three held orders (ord_20595, ord_20722, ord_20775) at three different hubs. The address on file for this customer may be wrong, so it's worth fixing once for all three.
+- **Duplicate payments:** ord_20636 has two $238 card captures (pay_000090 and pay_000091), and ord_21130 has two $1,677 e-wallet captures (pay_000420 and pay_000421). Both orders are charged twice. I didn't change anything, but these probably need refunds.
 
-Two of the held orders also show a duplicate card or e-wallet capture, with the same amount captured twice:
-- **ord_20636:** pay_000090 and pay_000091, MYR 238 each, on a MYR 238 order.
-- **ord_21130:** pay_000420 and pay_000421, MYR 1,677 each, on a MYR 1,677 order.
+**Failed deliveries, not address holds (14):** ord_20521, ord_20532, ord_20609, ord_20659, ord_20672, ord_20714, ord_20757, ord_20768, ord_20872, ord_20956, ord_21062, ord_21068, ord_21149, ord_21151.
 
-These may need a refund review regardless of the delivery hold.
-
-The other 14 orders are not held. Most show a failed delivery attempt ("recipient not available") or no hold at all: ord_20521, ord_20532, ord_20609, ord_20659, ord_20672, ord_20714, ord_20757, ord_20768, ord_20872, ord_20956, ord_21062, ord_21068, ord_21149 and ord_21151.
-
-Clearing on: 33 call(s), 174,292 input + 5,522 output tokens, USD 0.02019, 40.9 s, model claude-haiku-5-5
+Clearing on: 31 call(s), 170,154 input + 7,022 output tokens, USD 0.02053, 44.4 s, model claude-haiku-5-5

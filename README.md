@@ -147,16 +147,16 @@ Manages a long session with context editing and returns typed output through a f
 
 ## Shared Folders
 
-The running case is the support operation of Pintar, a Malaysian online electronics store. All lessons draw on these folders.
+The running case is the support operation of Acme, an online electronics store. All lessons draw on these folders.
 
 | Folder or file | Contents |
 |---|---|
 | `common/` | Modules that the lessons share, for cost measurement and store tools |
-| `data/pintar.db` | SQLite store with 150 customers, 500 orders over three months, payments including 16 duplicate captures, shipments, 1,900 courier events, and earlier refunds |
+| `data/store.db` | SQLite store with 150 customers, 500 orders over three months, payments including 16 duplicate captures, shipments, 1,900 courier events, and earlier refunds |
 | `data/refund_policy.md` | The returns, refunds, and delivery policy that agents follow |
-| `data/tickets.jsonl` | 60 customer messages in English, Malay, and Malaysian English, each labeled with the correct queue |
+| `data/tickets.jsonl` | 60 customer messages in formal and informal English, each labeled with the correct queue |
 | `data/product_specs.json` | Product facts for the listing programs |
-| `data/glossary.json` | The English to Malay terms that Pintar requires |
+| `data/glossary.json` | The English to French terms that Acme requires |
 
 The refund programs write to the store. To restore the original data, run `python data/build_data.py`.
 

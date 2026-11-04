@@ -1,8 +1,8 @@
-"""One request: Claude triages a customer email against the full Pintar policy."""
+"""One request: Claude triages a customer email against the full Acme policy."""
 import json
 import anthropic
 from meter import Meter, text
-from pintar_tools import DATA, POLICY
+from store_tools import DATA, POLICY
 
 MODEL = "claude-haiku-5-5"
 lines = (DATA / "tickets.jsonl").read_text(encoding="utf-8").splitlines()
@@ -13,7 +13,7 @@ meter = Meter(MODEL)
 resp = meter.add(client.messages.create(
     model=MODEL,
     max_tokens=1200,
-    system=("You are a Pintar customer service team lead. "
+    system=("You are an Acme customer service team lead. "
             "Apply only this policy:\n\n" + POLICY),
     messages=[{"role": "user", "content":
                "Triage this ticket concisely: category, urgency, the policy "
