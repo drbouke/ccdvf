@@ -1,0 +1,9 @@
+$ python run.py labs/lab10_safe_approvals/try_guard.py
+CLM-24004 Approve USD 4,000
+  exit 0, allowed
+CLM-24012 Approve USD 48,500
+  exit 2, Blocked: a grant of USD 48,500.00 must be referred to a claims officer (guide Section 9).
+CLM-24009 Approve USD 2,500
+  exit 2, Blocked: the grant USD 2,500.00 is above the computed grant USD 2,000.00 (codes ['A1']).
+CLM-24006 Reject USD 0
+  exit 0, allowed

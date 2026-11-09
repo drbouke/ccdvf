@@ -1,0 +1,17 @@
+$ python run.py labs/lab05_guide_in_cache/cached_desk.py CLM-24002 CLM-24005
+CLM-24002
+  call: 3,361 written, 0 read, 87 uncached
+  call: 0 written, 3,361 read, 533 uncached
+  call: 0 written, 3,361 read, 1,237 uncached
+  call: 0 written, 3,361 read, 1,890 uncached
+CLM-24002 is approved for USD 5,400: all five Bluepeak Foods trainees attended every day, and the fee and materials are within the caps. Employer, provider, trainer, deadline and duplicate checks all passed, and the amount is under the USD 20,000 referral threshold. 
+
+CLM-24005
+  call: 0 written, 3,361 read, 87 uncached
+  call: 0 written, 3,361 read, 511 uncached
+  call: 0 written, 3,361 read, 1,235 uncached
+  call: 0 written, 3,361 read, 2,021 uncached
+CLM-24005 is a Partial approval for USD 4,920. Sofia Rossi is removed for 75% attendance (A1, Section 4.3), and the fee is paid at the USD 400 cap rather than USD 420 (C1, Section 5.1). 
+
+8 call(s): 7,601 uncached, 3,361 written to the cache, 23,527 read from it, 2,190 output
+USD 0.00251 with the cache, USD 0.00454 without it, 45% saved

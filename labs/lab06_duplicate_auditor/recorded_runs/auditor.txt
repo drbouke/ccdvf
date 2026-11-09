@@ -1,0 +1,11 @@
+$ python run.py labs/lab06_duplicate_auditor/auditor.py 2026-11-06
+  audit 51207: 2 finding(s)
+  audit 54228: 1 finding(s)
+  audit 51488: 1 finding(s)
+  audit 51420: 2 finding(s)
+  audit 59118: 1 finding(s)
+
+CLM-24007 (Northwind Logistics, run 51207) is a duplicate (D1): all four trainees were already claimed under CLM-24001 on 2026-10-20. CLM-24010 (Redwood Insurance) and CLM-24011 (Bluepeak Foods) overlap (O1) on run 51420 because trainees RI-4410 and RI-4415 appear on both claims, so both are referred. CLM-24008, CLM-24009 and CLM-24012 are clear, and the audit of run 51207 also returned CLM-24001, an earlier claim not submitted on 2026-11-06, which it marked clear.
+
+Lead:      3 call(s), 4,064 input + 742 output tokens, USD 0.00078, 18.2 s, model claude-haiku-5-5
+Auditors:  5 call(s), 5,595 input + 1,647 output tokens, USD 0.00138, 18.2 s, model claude-haiku-5-5

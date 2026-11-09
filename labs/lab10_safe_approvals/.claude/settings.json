@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "PreToolUse": [{
+      "matcher": "mcp__grants__save_decision",
+      "hooks": [{
+        "type": "command",
+        "command": "python \"$CLAUDE_PROJECT_DIR\"/approval_guard.py"
+      }]
+    }]
+  }
+}

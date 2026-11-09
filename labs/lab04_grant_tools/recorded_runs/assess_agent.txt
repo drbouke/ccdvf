@@ -1,0 +1,32 @@
+$ python run.py labs/lab04_grant_tools/assess_agent.py CLM-24001 CLM-24004 CLM-24006
+CLM-24001
+  -> get_claim({"claim_id": "CLM-24001"})
+  -> get_employer({"name": "Northwind Logistics"})
+  -> get_provider({"name": "Brightpath Training"})
+  -> get_trainer({"name": "Daniel Brooks"})
+  -> find_claims({"class_id": "51207"})
+  -> calculate_grant({"claim_id": "CLM-24001"})
+  -> record_decision({"claim_id": "CLM-24001", "outcome": "Partial", "grant": 2400, "reasons": ["A1"], "note": "Employer is active with contributions paid to 2026-10, provider and trainer (ACC-1043) were valid on the 2026-10-05 to 2026-10-06 training dates, and the claim was submitted within 180 days. Lisa Wong attended only 1 of 2 days and is removed under the attendance rule (A1), so the grant is 3 trainees x 2 days x USD 400 = USD 2,400 (Sections 4 to 6). Note for the officer: CLM-24007 (submitted 2026-11-06) covers the same class 51207 and the same four trainees; this claim is the earlier one, so CLM-24007 should be reviewed as a duplicate."})
+CLM-24001 is recorded as Partial for USD 2,400, with reason code A1: Lisa Wong attended only 1 of 2 days and was removed, leaving 3 trainees × 2 days × USD 400. The employer, provider, trainer, and deadline checks all passed, and no earlier claim exists for this course run. Note that CLM-24007 covers the same class and trainees and was submitted later, so it should be reviewed as a duplicate. 
+
+CLM-24004
+  -> get_claim({"claim_id": "CLM-24004"})
+  -> get_employer({"name": "Greenleaf Retail"})
+  -> get_provider({"name": "Clearview Learning"})
+  -> get_trainer({"name": "Mark Ellis"})
+  -> find_claims({"class_id": "51318"})
+  -> calculate_grant({"claim_id": "CLM-24004"})
+  -> record_decision({"claim_id": "CLM-24004", "outcome": "Approve", "grant": 4000, "reasons": [], "note": "Employer is active with contributions paid to 2026-09, provider and trainer were valid for the 2026-08-24 to 2026-08-25 course, and the claim was submitted 2026-09-10, within 180 days. All 8 trainees attended both days, and the USD 4,000 invoice matches 8 \u00d7 2 \u00d7 USD 250 with no reason codes raised."})
+CLM-24004 is approved for USD 4,000.00: Greenleaf Retail is active with contributions paid to 2026-09, Clearview Learning and trainer Mark Ellis were valid for the 2026-08-24 to 2026-08-25 course, and the claim was submitted within the 180-day window. All 8 trainees attended both days, the invoice matches 8 × 2 × USD 250, and no earlier claims exist for class 51318. 
+
+CLM-24006
+  -> get_claim({"claim_id": "CLM-24006"})
+  -> get_employer({"name": "Northwind Logistics"})
+  -> get_provider({"name": "Clearview Learning"})
+  -> get_trainer({"name": "Julia Stone"})
+  -> find_claims({"class_id": "51371"})
+  -> record_decision({"claim_id": "CLM-24006", "outcome": "Reject", "grant": 0, "reasons": ["T1"], "note": "Trainer Julia Stone's accreditation (ACC-0861) expired on 2026-09-29, but the course ran 2026-09-28 to 2026-09-30, so day 3 (30 Sept) was delivered by an unaccredited trainer (trainer rule T1). Employer status, contributions (paid to 2026-10), provider registration, the 180-day deadline and duplicate checks all passed; no grant calculated."})
+I rejected claim CLM-24006 (Northwind Logistics, Clearview Learning, USD 0) under code T1 because trainer Julia Stone's accreditation ended on 29 September 2026, before the course's final day on 30 September.
+The employer, provider, deadline and duplicate checks all passed, so the trainer rule was the only failure. 
+
+14 call(s), 34,312 input + 3,244 output tokens, USD 0.00505, 26.6 s, model claude-haiku-5-5

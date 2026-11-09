@@ -1,0 +1,10 @@
+$ python run.py labs/lab07_grants_server/grants_client.py
+connected to grants
+tool get_claim: ['claim_id']
+tool check_eligibility: ['claim_id']
+tool grant_amount: ['claim_id']
+tool save_decision: ['claim_id', 'outcome', 'grant', 'reasons', 'note']
+resource grants://guide (text/markdown)
+CLM-24004: Greenleaf Retail, Customer Service Excellence, 8 trainees
+24004: No claim 24004; claim numbers look like CLM-24001.
+guide: 5,808 characters

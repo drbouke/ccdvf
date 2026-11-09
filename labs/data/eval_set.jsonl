@@ -1,0 +1,20 @@
+{"claim_id": "CLM-24001", "outcome": "Partial", "grant": 2400.0, "reasons": ["A1"]}
+{"claim_id": "CLM-24002", "outcome": "Approve", "grant": 5400.0, "reasons": []}
+{"claim_id": "CLM-24003", "outcome": "Partial", "grant": 8000.0, "reasons": ["A1", "B2"]}
+{"claim_id": "CLM-24004", "outcome": "Approve", "grant": 4000.0, "reasons": []}
+{"claim_id": "CLM-24005", "outcome": "Partial", "grant": 4920.0, "reasons": ["A1", "C1"]}
+{"claim_id": "CLM-24006", "outcome": "Reject", "grant": 0.0, "reasons": ["T1"]}
+{"claim_id": "CLM-24007", "outcome": "Reject", "grant": 0.0, "reasons": ["D1"]}
+{"claim_id": "CLM-24008", "outcome": "Reject", "grant": 0.0, "reasons": ["P1"]}
+{"claim_id": "CLM-24010", "outcome": "Refer", "grant": 3200.0, "reasons": ["O1"]}
+{"claim_id": "CLM-24012", "outcome": "Refer", "grant": 48500.0, "reasons": []}
+{"claim_id": "CLM-24016", "outcome": "Reject", "grant": 0.0, "reasons": ["E1"]}
+{"claim_id": "CLM-24017", "outcome": "Reject", "grant": 0.0, "reasons": ["T1"]}
+{"claim_id": "CLM-24020", "outcome": "Partial", "grant": 6000.0, "reasons": ["C1"]}
+{"claim_id": "CLM-24021", "outcome": "Partial", "grant": 5250.0, "reasons": ["C2"]}
+{"claim_id": "CLM-24022", "outcome": "Reject", "grant": 0.0, "reasons": ["S1"]}
+{"claim_id": "CLM-24023", "outcome": "Partial", "grant": 8000.0, "reasons": ["B2"]}
+{"claim_id": "CLM-24024", "outcome": "Approve", "grant": 2700.0, "reasons": []}
+{"claim_id": "CLM-24028", "outcome": "Approve", "grant": 8680.0, "reasons": []}
+{"claim_id": "CLM-24033", "outcome": "Partial", "grant": 3650.0, "reasons": ["A1"]}
+{"claim_id": "CLM-24038", "outcome": "Partial", "grant": 6600.0, "reasons": ["A1", "C1"]}

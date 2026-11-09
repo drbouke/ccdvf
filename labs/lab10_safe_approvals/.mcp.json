@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "grants": {
+      "command": "python",
+      "args": ["grants_server.py"]
+    }
+  }
+}

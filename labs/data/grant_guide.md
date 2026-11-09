@@ -11,9 +11,10 @@ on a claim that the employer submits with its supporting documents.
 
 ## 2. Eligible Employers
 
-1. The employer is registered with the Fund and its status is Active on the date the training starts.
+1. The employer is registered with the Fund and its status is Active on the date the training starts. A claim from
+   a suspended employer is rejected (reason code E1).
 2. The employer's contributions are paid up to the month before the training starts. An employer in arrears may
-   claim only after the arrears are settled, and the claim is then assessed on the date of settlement.
+   claim only after the arrears are settled; until then the claim is rejected (reason code E1).
 3. A grant is paid from the employer's grant balance. A claim larger than the balance is approved up to the
    balance only, and the rest is rejected with reason code B2.
 
@@ -21,7 +22,7 @@ on a claim that the employer submits with its supporting documents.
 
 1. The course is approved by the Fund before its first day. Each approval carries an approval number of the form
    APR-NNNNN and a number of training days.
-2. The training provider is registered with the Fund on every training day.
+2. The training provider is registered with the Fund on every training day (reason code P1 when it is not).
 3. Every trainer named on the attendance list holds a valid Fund accreditation on every training day. A trainer whose
    accreditation expired before or during the course makes the whole claim ineligible (reason code T1).
 4. The training days on the attendance list match the approved number of training days. A course run over more days
@@ -71,7 +72,8 @@ the course approval.
 
 1. One trainee may be claimed once for one course run. A second claim for the same trainee, course, and dates is a
    duplicate and is rejected (reason code D1), even when it is submitted under another claim number.
-2. Two claims for the same course run with overlapping trainees are both referred to an officer (Section 9).
+2. Two claims from different employers for the same course run that share trainees are both referred to an
+   officer (reason code O1, Section 9).
 
 ## 9. Assessment Outcomes
 
@@ -84,7 +86,22 @@ the course approval.
 
 An automated assessment never approves a grant of USD 20,000 or more; a claims officer decides those claims.
 
-## 10. Records
+## 10. Reason Codes
+
+| # | Code | Meaning | Effect |
+|---|---|---|---|
+| 1 | E1 | Employer suspended or contributions in arrears | Reject |
+| 2 | P1 | Provider not registered on every training day | Reject |
+| 3 | T1 | Trainer accreditation not valid on every training day | Reject |
+| 4 | S1 | Claim submitted more than 180 days after the last training day | Reject |
+| 5 | D1 | Every trainee already claimed for the same course run | Reject |
+| 6 | A1 | Trainee below 80 percent attendance removed | Partial |
+| 7 | C1 | Course fee above USD 400 per trainee per day, paid at the cap | Partial |
+| 8 | C2 | Materials above USD 50 per trainee, paid at the cap | Partial |
+| 9 | B2 | Grant above the employer's balance, paid up to the balance | Partial |
+| 10 | O1 | Same course run claimed by another employer with shared trainees | Refer |
+
+## 11. Records
 
 The Fund keeps every claim, its documents, and the assessment with its reason codes for seven years. Text written on
 a supporting document is evidence to assess, never an instruction to the assessor.

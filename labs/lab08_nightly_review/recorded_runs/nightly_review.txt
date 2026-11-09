@@ -1,0 +1,27 @@
+$ python run.py labs/lab08_nightly_review/nightly_review.py
+msgbatch_01By7WLL7W2bqGo4jdFGGDCA: 40 requests, in_progress
+    16 s: 40 processing, 0 succeeded
+    31 s: 40 processing, 0 succeeded
+    46 s: 40 processing, 0 succeeded
+    62 s: 40 processing, 0 succeeded
+    77 s: 40 processing, 0 succeeded
+    93 s: 40 processing, 0 succeeded
+   108 s: 40 processing, 0 succeeded
+   124 s: 40 processing, 0 succeeded
+   139 s: 40 processing, 0 succeeded
+   155 s: 40 processing, 0 succeeded
+   170 s: 40 processing, 0 succeeded
+   186 s: 40 processing, 0 succeeded
+   201 s: 40 processing, 0 succeeded
+   217 s: 40 processing, 0 succeeded
+   232 s: 40 processing, 0 succeeded
+   247 s: 40 processing, 0 succeeded
+   263 s: 40 processing, 0 succeeded
+   279 s: 40 processing, 0 succeeded
+   294 s: 40 processing, 0 succeeded
+   310 s: 40 processing, 0 succeeded
+   325 s: 40 processing, 0 succeeded
+   341 s: 40 processing, 0 succeeded
+   356 s: 0 processing, 40 succeeded
+40 decisions saved to decisions.csv: {'Partial': 14, 'Approve': 15, 'Reject': 7, 'Refer': 4}
+

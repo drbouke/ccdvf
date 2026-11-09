@@ -1,0 +1,253 @@
+{
+ "CLM-24037": {
+  "outcome": "Approve",
+  "grant": 5950.0,
+  "reasons": []
+ },
+ "CLM-24013": {
+  "outcome": "Approve",
+  "grant": 2000.0,
+  "reasons": []
+ },
+ "CLM-24015": {
+  "outcome": "Approve",
+  "grant": 2250.0,
+  "reasons": []
+ },
+ "CLM-24026": {
+  "outcome": "Approve",
+  "grant": 1520.0,
+  "reasons": []
+ },
+ "CLM-24027": {
+  "outcome": "Partial",
+  "grant": 7000.0,
+  "reasons": [
+   "C1"
+  ]
+ },
+ "CLM-24028": {
+  "outcome": "Approve",
+  "grant": 8680.0,
+  "reasons": []
+ },
+ "CLM-24004": {
+  "outcome": "Approve",
+  "grant": 4000.0,
+  "reasons": []
+ },
+ "CLM-24025": {
+  "outcome": "Partial",
+  "grant": 3240.0,
+  "reasons": [
+   "A1"
+  ]
+ },
+ "CLM-24017": {
+  "outcome": "Reject",
+  "grant": 0.0,
+  "reasons": [
+   "T1"
+  ]
+ },
+ "CLM-24014": {
+  "outcome": "Approve",
+  "grant": 1320.0,
+  "reasons": []
+ },
+ "CLM-24039": {
+  "outcome": "Approve",
+  "grant": 15000.0,
+  "reasons": []
+ },
+ "CLM-24018": {
+  "outcome": "Partial",
+  "grant": 8750.0,
+  "reasons": [
+   "A1"
+  ]
+ },
+ "CLM-24038": {
+  "outcome": "Partial",
+  "grant": 6600.0,
+  "reasons": [
+   "A1",
+   "C1"
+  ]
+ },
+ "CLM-24040": {
+  "outcome": "Approve",
+  "grant": 4550.0,
+  "reasons": []
+ },
+ "CLM-24016": {
+  "outcome": "Reject",
+  "grant": 0.0,
+  "reasons": [
+   "E1"
+  ]
+ },
+ "CLM-24002": {
+  "outcome": "Approve",
+  "grant": 5400.0,
+  "reasons": []
+ },
+ "CLM-24020": {
+  "outcome": "Partial",
+  "grant": 6000.0,
+  "reasons": [
+   "C1"
+  ]
+ },
+ "CLM-24031": {
+  "outcome": "Partial",
+  "grant": 4050.0,
+  "reasons": [
+   "C2"
+  ]
+ },
+ "CLM-24029": {
+  "outcome": "Partial",
+  "grant": 3140.0,
+  "reasons": [
+   "A1"
+  ]
+ },
+ "CLM-24021": {
+  "outcome": "Partial",
+  "grant": 5250.0,
+  "reasons": [
+   "C2"
+  ]
+ },
+ "CLM-24032": {
+  "outcome": "Approve",
+  "grant": 5580.0,
+  "reasons": []
+ },
+ "CLM-24006": {
+  "outcome": "Reject",
+  "grant": 0.0,
+  "reasons": [
+   "T1"
+  ]
+ },
+ "CLM-24030": {
+  "outcome": "Approve",
+  "grant": 3040.0,
+  "reasons": []
+ },
+ "CLM-24001": {
+  "outcome": "Partial",
+  "grant": 2400.0,
+  "reasons": [
+   "A1"
+  ]
+ },
+ "CLM-24003": {
+  "outcome": "Partial",
+  "grant": 8000.0,
+  "reasons": [
+   "A1",
+   "B2"
+  ]
+ },
+ "CLM-24019": {
+  "outcome": "Partial",
+  "grant": 9300.0,
+  "reasons": [
+   "A1"
+  ]
+ },
+ "CLM-24033": {
+  "outcome": "Partial",
+  "grant": 3650.0,
+  "reasons": [
+   "A1"
+  ]
+ },
+ "CLM-24022": {
+  "outcome": "Reject",
+  "grant": 0.0,
+  "reasons": [
+   "S1"
+  ]
+ },
+ "CLM-24034": {
+  "outcome": "Approve",
+  "grant": 1750.0,
+  "reasons": []
+ },
+ "CLM-24005": {
+  "outcome": "Partial",
+  "grant": 4920.0,
+  "reasons": [
+   "A1",
+   "C1"
+  ]
+ },
+ "CLM-24007": {
+  "outcome": "Reject",
+  "grant": 0.0,
+  "reasons": [
+   "D1"
+  ]
+ },
+ "CLM-24008": {
+  "outcome": "Reject",
+  "grant": 0.0,
+  "reasons": [
+   "P1"
+  ]
+ },
+ "CLM-24009": {
+  "outcome": "Partial",
+  "grant": 2000.0,
+  "reasons": [
+   "A1"
+  ]
+ },
+ "CLM-24010": {
+  "outcome": "Refer",
+  "grant": 3200.0,
+  "reasons": [
+   "O1"
+  ]
+ },
+ "CLM-24011": {
+  "outcome": "Refer",
+  "grant": 4050.0,
+  "reasons": [
+   "O1"
+  ]
+ },
+ "CLM-24012": {
+  "outcome": "Refer",
+  "grant": 48500.0,
+  "reasons": []
+ },
+ "CLM-24023": {
+  "outcome": "Partial",
+  "grant": 8000.0,
+  "reasons": [
+   "B2"
+  ]
+ },
+ "CLM-24024": {
+  "outcome": "Approve",
+  "grant": 2700.0,
+  "reasons": []
+ },
+ "CLM-24035": {
+  "outcome": "Approve",
+  "grant": 1960.0,
+  "reasons": []
+ },
+ "CLM-24036": {
+  "outcome": "Reject",
+  "grant": 0.0,
+  "reasons": [
+   "E1"
+  ]
+ }
+}

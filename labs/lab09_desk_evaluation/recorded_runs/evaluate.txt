@@ -1,0 +1,28 @@
+$ python run.py labs/lab09_desk_evaluation/evaluate.py
+CLM-24001: Partial  outcome ok reasons ok grant ok
+CLM-24002: Approve  outcome ok reasons ok grant ok
+CLM-24003: Partial  outcome ok reasons ok grant ok
+CLM-24004: Approve  outcome ok reasons ok grant ok
+CLM-24005: Partial  outcome ok reasons ok grant ok
+CLM-24006: Reject   outcome ok reasons ok grant ok
+CLM-24007: Reject   outcome ok reasons ok grant ok
+CLM-24008: Reject   outcome ok reasons ok grant ok
+CLM-24010: Refer    outcome ok reasons ok grant ok
+CLM-24012: Refer    outcome ok reasons ok grant ok
+CLM-24016: Reject   outcome ok reasons ok grant ok
+CLM-24017: Reject   outcome ok reasons ok grant ok
+CLM-24020: Refer    outcome MISS reasons ok grant MISS
+CLM-24021: Partial  outcome ok reasons ok grant ok
+CLM-24022: Reject   outcome ok reasons ok grant ok
+CLM-24023: Partial  outcome ok reasons ok grant ok
+CLM-24024: Approve  outcome ok reasons ok grant ok
+CLM-24028: Approve  outcome ok reasons ok grant ok
+CLM-24033: Partial  outcome ok reasons ok grant ok
+CLM-24038: Partial  outcome ok reasons ok grant ok
+judge CLM-24001: 3/5, The note states the outcome correctly (partial, USD 2,400 grant) and cites Section 4.3 for the A1 attendance reason and Sections 5.1 and 6 for the fee calculation, so the grant and the A1 reason are supported. However, it adds a D1 duplicate finding for CLM-24007 under Section 8.1, which is not in the expected decision's reasons and concerns a different claim, and it does not give the reason behind the Section 8.1 citation. Because one reason code is missing its explanation and an extra code is applied without support in the expected decision, the note falls short of a full score.
+judge CLM-24002: 4/5, The note states the outcome implicitly (the grant of USD 5,400 matching the expected grant of 5400.0) but does not explicitly say 'Approve'. It cites Sections 2, 3, 4-6, 7, 8 for the rules applied and gives the calculation behind the grant. However, the expected decision has an empty reasons list, and the note gives no reason codes, so the 'reason behind every reason code' criterion is not applicable but the note offers no reason codes to justify, which is consistent. The main shortfall is that the approval outcome is not stated outright, and the Section 3 and Section 7 citations are not tied to specific sub-rules, so it falls short of a full 5.
+judge CLM-24003: 5/5, The note states the outcome (partial, capped at the USD 8,000 grant), gives a reason for each code (A1 for removing Tom Becker under Section 4.3 at 60%, B2 for the cap under Section 2.3), and cites the guide sections for the rules applied. It matches the expected decision on outcome, grant amount and both reason codes.
+judge CLM-24004: 5/5, The note states the outcome (approve) and the USD 4,000 grant, and cites the guide section for each rule it applies: Sections 2, 3, 7, 8 for eligibility, Section 4 for attendance, and Section 9 for the referral threshold. The expected decision has an empty reasons list, so no reason codes need explaining, and the note correctly reflects that by stating all rules are met. The grant computation (8 x 2 x USD 250) matches the expected 4000.0.
+judge CLM-24005: 3/5, The note states the partial outcome and the grant reasoning is close, but it does not explain the grant figure: the expected grant is 4920.0 and the note says 3 trainees are approved at USD 4,920 under Section 6, which is ambiguous about whether this is a total or per-trainee amount and how the USD 400 cap affects the calculation. It also cites Section 4.3, 5.1, and 6 but does not cite the guide section for the employer, provider, trainer, and timing checks, nor give a reason code for the balance check, so it is missing citations and a clear basis for each reason code.
+outcome_accuracy 95%, reasons_accuracy 100%, grant_accuracy 95%, judge_mean 4.0
+25 call(s), 21,042 input + 12,022 output tokens, USD 0.00812, 82.3 s, model claude-haiku-5-5
