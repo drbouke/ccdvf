@@ -1,0 +1,33 @@
+Recorded run, 07 November 2026. Command: python run.py part1/05_context_and_cost/context_clearing.py --off
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+I reviewed all 30 orders. 16 are held because the delivery address could not be verified:
+
+| Order | Customer ID | Hub |
+|---|---|---|
+| ord_20575 | C-1147 | Lakeside hub |
+| ord_20590 | C-1216 | Midtown hub |
+| ord_20595 | C-1179 | Midtown hub |
+| ord_20627 | C-1156 | Bayview hub |
+| ord_20636 | C-1204 | Bayview hub |
+| ord_20697 | C-1226 | Lakeside hub |
+| ord_20722 | C-1179 | Central hub |
+| ord_20775 | C-1179 | Lakeside hub |
+| ord_20788 | C-1203 | Central hub |
+| ord_20794 | C-1109 | Lakeside hub |
+| ord_20798 | C-1227 | Lakeside hub |
+| ord_20882 | C-1244 | Eastside hub |
+| ord_21030 | C-1145 | Central hub |
+| ord_21044 | C-1219 | Lakeside hub |
+| ord_21108 | C-1196 | Midtown hub |
+| ord_21130 | C-1139 | Eastside hub |
+
+Customer C-1179 has three of these held orders (ord_20595, ord_20722, ord_20775).
+
+The other 14 orders were not held for address problems. Most failed delivery attempts with "recipient not available," and those are not address holds.
+
+Two of the orders also show duplicate captures that may need a look:
+- **ord_20636:** two card captures of $238.00 each (pay_000090 and pay_000091).
+- **ord_21130:** two e-wallet captures of $1,677.00 each (pay_000420 and pay_000421).
+
+31 call(s), 268,989 input + 3,172 output tokens, USD 0.02848, 36.0 s, model claude-haiku-5-5

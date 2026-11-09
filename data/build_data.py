@@ -1,4 +1,4 @@
-"""Builds the Acme data set used by every example: an online electronics store.
+"""Builds the data of the Acme support project: an online electronics store.
 
     python data/build_data.py        (re-creates data/store.db; the same seed gives the same data every time)
 
@@ -140,7 +140,7 @@ def build():
 
 
 def _scenarios(c):
-    """Fixed cases the examples and tickets refer to, so their answers can be checked."""
+    """Fixed cases the programs and tickets refer to, so their answers can be checked."""
     # Alice: blender arrived cracked AND was charged twice
     c.execute("INSERT OR REPLACE INTO customers VALUES ('C-1182','Alice Smith','alice.smith@example.com','555-012-418 2290','Eastside','2025-03-14 10:02','gold')")
     c.execute("INSERT OR REPLACE INTO orders VALUES ('ord_20931','C-1182','2026-10-24 21:15','delivered',289.00,'Eastside','2026-10-27 14:40')")

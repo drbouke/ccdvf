@@ -1,0 +1,7 @@
+Recorded run, 07 November 2026. Command: python run.py part2/10_debugging_and_evaluation/judge.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+T-1001: score 6
+  The reply is empathetic and asks for useful verification details, but it overpromises the refund before verification and gives a misleading timeline by mixing refund-processing times with verification. It also omits the 1-business-day verification window, which weakens the clarity of next steps required by section 7.
+T-1002: score 6
+  The reply follows section 4.2 by requesting address confirmation and contact details, and it is polite. However, it omits the required time frame under section 7.1 and misattributes the action to an escalation team rather than the agent, so it is only partly compliant.

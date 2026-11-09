@@ -1,0 +1,7 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/max_tokens.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+max_tokens=300: max_tokens, 300 output tokens
+  ends with: ''
+max_tokens=4000: end_turn, 2766 output tokens
+  ends with: 'er. It probably belongs under billing or delivery.'

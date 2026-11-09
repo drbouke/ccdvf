@@ -1,0 +1,55 @@
+Recorded run, 07 November 2026. Command: python run.py part1/05_context_and_cost/context_clearing.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+call 14: 3,688 input tokens after clearing 10 results
+call 15: 4,387 input tokens after clearing 10 results
+call 16: 4,969 input tokens after clearing 10 results
+call 17: 5,576 input tokens after clearing 10 results
+call 18: 6,388 input tokens after clearing 10 results
+call 19: 6,895 input tokens after clearing 10 results
+call 20: 7,481 input tokens after clearing 10 results
+call 21: 5,034 input tokens after clearing 17 results
+call 22: 5,528 input tokens after clearing 17 results
+call 23: 6,063 input tokens after clearing 17 results
+call 24: 6,562 input tokens after clearing 17 results
+call 25: 7,147 input tokens after clearing 17 results
+call 26: 6,054 input tokens after clearing 22 results
+call 27: 6,562 input tokens after clearing 22 results
+call 28: 7,157 input tokens after clearing 22 results
+call 29: 6,990 input tokens after clearing 25 results
+call 30: 7,623 input tokens after clearing 26 results
+call 31: 7,685 input tokens after clearing 27 results
+call 32: 7,804 input tokens after clearing 28 results
+I've now reviewed all 30 orders. Ord_20532 is not an address hold; its delivery failed because the recipient was not available. Ord_20521 was checked earlier and also showed a recipient-unavailable failure, not an address hold, so no re-check is needed.
+
+**Orders held because the address could not be verified (14):**
+
+| Order | Customer | Hub |
+|---|---|---|
+| ord_20575 | C-1147 | Lakeside |
+| ord_20590 | C-1216 | Midtown |
+| ord_20595 | C-1179 | Midtown |
+| ord_20627 | C-1156 | Bayview |
+| ord_20636 | C-1204 | Bayview |
+| ord_20697 | C-1226 | Lakeside |
+| ord_20722 | C-1179 | Central |
+| ord_20775 | C-1179 | Lakeside |
+| ord_20788 | C-1203 | Central |
+| ord_20794 | C-1109 | Lakeside |
+| ord_20798 | C-1227 | Lakeside |
+| ord_20882 | C-1244 | Eastside |
+| ord_21030 | C-1145 | Central |
+| ord_21044 | C-1219 | Lakeside |
+| ord_21108 | C-1196 | Midtown |
+| ord_21130 | C-1139 | Eastside |
+
+That is 16 orders, not 14. Counting the table gives 16 rows.
+
+**Things to look at:**
+- **Customer C-1179** has three address-held orders at three different hubs (ord_20595 Midtown, ord_20722 Central, ord_20775 Lakeside). This points to a problem with the account's address rather than with individual orders.
+- **Possible duplicate charges** on two address-held orders:
+  - ord_20636: two captured card payments of $238 each (pay_000090, pay_000091) against a $238 total.
+  - ord_21130: two captured e-wallet payments of $1,677 each (pay_000420, pay_000421) against a $1,677 total.
+- **Not address holds:** ord_20521, ord_20532, ord_20609, ord_20659, ord_20672, ord_20714, ord_20757, ord_20768, ord_20872, ord_20956, ord_21062, ord_21068, ord_21149, and ord_21151. Each of these shows a delivery failure because the recipient was not available, or a similar non-address status.
+
+32 call(s), 172,156 input + 6,199 output tokens, USD 0.02032, 43.8 s, model claude-haiku-5-5

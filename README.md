@@ -4,162 +4,211 @@
 
 <h1 align="center">Claude Certified Developer, Foundations</h1>
 
-<p align="center">Exam code CCDV-F</p>
+<p align="center">Course programs, in the order of the lessons</p>
 
-## The Certification
+This repository holds the programs of the CCDV-F course. The folders follow the lessons on the course platform:
+first Core Concepts, then Part 1 and Part 2. Each lesson with programs has its own folder, numbered as the lesson is,
+so the slide you are on always tells you where its code is. Every program also has its real output in a
+`recorded_runs` folder, so you can read the result before you run it.
 
-This certification validates that a developer can build, integrate, and ship production-grade applications, agents, and workflows on the Claude platform at a foundational level. It is intended for technical professionals who turn business requirements into working systems through API integration, agent and tool construction, prompt and context engineering, evaluation, security, and model selection.
+## Course Map
 
-| Exam | Details |
-|---|---|
-| Items | 53 multiple-choice and multiple-response |
-| Time limit | 120 minutes |
-| Passing score | 720 on a scale of 100 to 1,000 |
-
-## The Domains
-
-| Domain | Weight | What it covers | Where to learn it |
+| # | Module | Lesson | Folder |
 |---|---|---|---|
-| [1. Agents and Workflows](#domain-1-agents-and-workflows) | 14.7% | Agent and workflow architecture, the Claude Agent SDK, hooks, design patterns, and frameworks | Platform lessons and [programs](domain1) |
-| [2. Applications and Integration](#domain-2-applications-and-integration) | 33.1% | Requirements, the Claude API, software engineering practice, application design, and configuration | Platform lessons |
-| [3. Claude Code](#domain-3-claude-code) | 3.1% | Core components, features, the CLAUDE.md hierarchy, and settings | Platform lessons |
-| [4. Eval, Testing, and Debugging](#domain-4-eval-testing-and-debugging) | 2.6% | Error types, recovery strategies, and trace analysis | Platform lessons |
-| [5. Model Selection and Optimization](#domain-5-model-selection-and-optimization) | 16.8% | LLM fundamentals, model tradeoffs, tokens, caching, and cost | Platform lessons |
-| [6. Prompt and Context Engineering](#domain-6-prompt-and-context-engineering) | 11.0% | Context management, prompt design, and output validation | Platform lessons |
-| [7. Security and Safety](#domain-7-security-and-safety) | 8.1% | Prompt injection defense, guardrails, hooks, and key management | Platform lessons |
-| [8. Tools and MCPs](#domain-8-tools-and-mcps) | 10.6% | Tool implementation, MCP servers, and customization choices | Platform lessons |
-
-Domain names and weights come from the CCDV-F Exam Guide, version 1.0, July 2026.
+| 1 | Core Concepts | Core Concepts | [`core_concepts`](core_concepts) |
+| 2 | Part 1 | 0. Environment | [`part1/00_environment`](part1/00_environment) |
+| 3 | Part 1 | 1. Foundations | Slides only |
+| 4 | Part 1 | 2. Claude API | [`part1/02_claude_api`](part1/02_claude_api) |
+| 5 | Part 1 | 3. Prompts and Output | [`part1/03_prompts_and_output`](part1/03_prompts_and_output) |
+| 6 | Part 1 | 4. Tools | [`part1/04_tools`](part1/04_tools) |
+| 7 | Part 1 | 5. Context and Cost | [`part1/05_context_and_cost`](part1/05_context_and_cost) |
+| 8 | Part 1 | 6. Agents | Slides only |
+| 9 | Part 2 | 7. Claude Code | Slides only |
+| 10 | Part 2 | 8. Skills, Plugins, and MCP | [`part2/08_skills_plugins_and_mcp`](part2/08_skills_plugins_and_mcp) |
+| 11 | Part 2 | 9. Engineering and Lifecycle | [`part2/09_engineering_and_lifecycle`](part2/09_engineering_and_lifecycle) |
+| 12 | Part 2 | 10. Debugging and Evaluation | [`part2/10_debugging_and_evaluation`](part2/10_debugging_and_evaluation) |
+| 13 | Part 2 | 11. Security and Safety | [`part2/11_security_and_safety`](part2/11_security_and_safety) |
+| 14 | Part 2 | 12. Exam Method | Slides only |
 
 ## Getting Started
 
-Prepare the environment with [SETUP.md](SETUP.md), then run the setup check and the first agent.
+1. Prepare the environment with [SETUP.md](SETUP.md), on a laptop or in GitHub Codespaces.
+2. Check the environment. The check sends one small request and ends with `Ready.`
 
 ```
 python check_setup.py --ping
-python run.py domain1/1.2_agent_construction/agent.py
 ```
 
-Run every program from the main folder. Each lesson folder holds a `recorded_runs` folder with the real output of its programs, including tokens and cost.
+3. Run a program from the `ccdvf` folder, giving its path:
 
-## Domain 1. Agents and Workflows
+```
+python run.py core_concepts/first_request.py
+python run.py part1/04_tools/agent.py
+```
 
-### [Development Environment](domain1/1.0_environment)
+A program can also run with **F5** in VS Code, through the **Run this program** configuration.
 
-Builds the course environment and follows the API key from a file to a request.
+## Core Concepts
 
-| Program | Concept | Output |
-|---|---|---|
-| `inject_key.py` | API key injection | The key at each stage, from the `.env` file to the request header |
+Folder [`core_concepts`](core_concepts). The terms that every later lesson uses, each shown in running code.
 
-### [1.1 Agent Architecture](domain1/1.1_agent_architecture) (4.5%)
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `tokens.py` | Tokens | The input tokens of a greeting, a question, an order id, and the refund policy |
+| 2 | `first_request.py` | Request and response | The content blocks, stop reason, and token usage of one request |
+| 3 | `history.py` | Stateless API | The same question asked without and with the earlier messages |
+| 4 | `max_tokens.py` | Output limit | A reply cut at 60 tokens and the same reply finished with a higher limit |
+| 5 | `stream.py` | Streaming | The time each of the first pieces of a reply arrives |
+| 6 | `caching.py` | Prompt caching | Three tickets with the policy written to the cache once and then read |
+| 7 | `batches.py` | Message Batches | Last night's 60 tickets labeled in one batch |
+| 8 | `raw_http.py` | Raw web request | The same request sent with no SDK |
+| 9 | `first_request.ts` | TypeScript SDK | The same request in TypeScript |
+| 10 | `get_order_tool.py` | Tool definition | The name, description, and input schema Claude receives |
+| 11 | `tool_request.py` | Tool request | The `tool_use` block Claude returns when it needs a tool |
+| 12 | `agent_sdk.py` | Agent SDK | An agent that searches the data folder on its own and answers |
 
-Compares fixed workflows with agents and shows a supervisor directing subagents.
+## Part 1. Building with Claude
 
-| Program | Concept | Output |
-|---|---|---|
-| `listing_chain.py` | Prompt chaining with a gate | Listings drafted from specifications, checked by code, then translated |
-| `route_tickets.py` | Routing with parallel calls | 60 tickets sorted into five queues, with accuracy against the labels |
-| `route_tickets.py --votes 3` | Parallelization by voting | The same routing with three votes per ticket |
-| `translate_loop.py` | Evaluator-optimizer | A translator and a reviewer repeating until the glossary and facts are correct |
-| `audit_subagents.py` | Supervisor and subagents | A lead agent auditing each duplicate charge through order-auditor subagents |
+### 0. Environment
 
-### [1.2 Agent Construction with Claude](domain1/1.2_agent_construction) (5.3%)
+Sections: 0.1 Environment and Key.
 
-Builds an agent from one request to a complete loop, then adds tools and hooks.
+Folder [`part1/00_environment`](part1/00_environment).
 
-| Program | Concept | Output |
-|---|---|---|
-| `first_call.py` | One request | A ticket triaged against the full policy, with stop reason and cost |
-| `inspect_response.py` | Response object | Every field of one response as JSON |
-| `round_trip.py` | Tool-use round trip | Each request and response in the loop, linked by tool use ID |
-| `agent.py` | Tool-use loop | A two-issue complaint answered after customer, order, and policy lookups |
-| `fix_tests.py` | Agent SDK on a code base | The agent finds and fixes the bug that the tests catch |
-| `refund_agent.py` | Agent SDK, custom tools, hooks | Refund cases decided by an agent, with a hook enforcing approval limits |
-| `hook_check.py` | Deterministic hooks | The same hook applied to store orders without a model |
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `inject_key.py` | API key injection | The key at each stage, from the `.env` file to the request header |
 
-### [1.3 Agent Patterns and Frameworks](domain1/1.3_agent_patterns) (4.9%)
+### 1. Foundations
 
-Manages a long session with context editing and returns typed output through a framework.
+Sections: 1.1 Models and Behavior.
 
-| Program | Concept | Output |
-|---|---|---|
-| `context_clearing.py` | Context editing | A 30-order review with old tool results cleared |
-| `context_clearing.py --off` | Context editing off | The same review without clearing, for comparison |
-| `returns.py` | Pydantic AI, typed output | Return requests decided against the policy as validated objects |
+This lesson is taught on the slides and has no programs.
 
-## Domain 2. Applications and Integration
+### 2. Claude API
 
-| Lesson | Weight | Focus |
-|---|---|---|
-| 2.1 Understanding Requirements | 3.4% | Functional and infrastructure requirements from business needs |
-| 2.2 Systems Life Cycle | 2.8% | Developing, implementing, operating, and maintaining systems |
-| 2.3 Claude API Mechanics | 6.8% | Messages, tools, streaming, vision, thinking, caching, and batch |
-| 2.4 Software Engineering Foundations | 7.4% | REST, JSON, asynchronous code, version control, and refactoring |
-| 2.5 Claude Application Design | 8.6% | Interfaces, content boundaries, schemas, sessions, and plugins |
-| 2.6 Configuration Management | 4.1% | CLAUDE.md, settings.json, version pinning, and prompt versions |
+Sections: 2.1 Messages API and Connections, 2.2 Streaming, 2.3 Images, Documents, and Thinking, 2.4 Batches and Platforms.
 
-## Domain 3. Claude Code
+Folder [`part1/02_claude_api`](part1/02_claude_api).
 
-| Lesson | Weight | Focus |
-|---|---|---|
-| 3.1 Claude Code Operation | 3.1% | Rules, Skills, commands, agents, memory, sessions, and settings |
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `stream_events.py` | Streaming events | Each server-sent event of one reply, in arrival order |
 
-## Domain 4. Eval, Testing, and Debugging
+### 3. Prompts and Output
 
-| Lesson | Weight | Focus |
-|---|---|---|
-| 4.1 Debugging and Error Handling | 2.6% | Error types, recovery strategies, traces, and failure origin |
+Sections: 3.1 Prompt Craft, 3.2 Output Handling.
 
-## Domain 5. Model Selection and Optimization
+Folder [`part1/03_prompts_and_output`](part1/03_prompts_and_output).
 
-| Lesson | Weight | Focus |
-|---|---|---|
-| 5.1 LLM Fundamentals | 5.2% | Tokens, context windows, sampling, model options, and shot-based prompting |
-| 5.2 Technical Fundamentals | 6.1% | Integrating with SDKs that wrap REST APIs, and websockets |
-| 5.3 Model Selection and Tradeoffs | 2.7% | Opus, Sonnet, and Haiku, with quality, latency, and cost |
-| 5.4 Cost and Token Management | 2.8% | Token budgets, usage tracking, cost models, and prompt caching |
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `label_prompts.py` | Output constraints and examples | The replies of each prompt on ten tickets, and how many are exact labels |
+| 2 | `structured_ticket.py` | Structured outputs | Three tickets triaged as JSON that always parses |
 
-## Domain 6. Prompt and Context Engineering
+### 4. Tools
 
-| Lesson | Weight | Focus |
-|---|---|---|
-| 6.1 Context Engineering | 3.8% | Context windows, drift and bloat, compaction, and isolation |
-| 6.2 Prompt Engineering | 4.6% | Clear instructions, examples, placement, constraints, and refinement |
-| 6.3 Output Handling | 2.6% | Structured output, response validation, and defensive parsing |
+Sections: 4.1 Tool Round Trip, 4.2 Tool Design, 4.3 Control and Approval.
 
-## Domain 7. Security and Safety
+Folder [`part1/04_tools`](part1/04_tools).
 
-| Lesson | Weight | Focus |
-|---|---|---|
-| 7.1 AI Application Security | 3.2% | Prompt injection, jailbreaks, untrusted input, and data leakage |
-| 7.2 Guardrails and Safe Deployment | 2.3% | Guardrail layers, secure design, and least privilege |
-| 7.3 Claude Hooks | 1.0% | Hooks that prevent destructive actions |
-| 7.4 Identity, Secrets, and Key Management | 1.6% | Credentials, API keys, authentication, and access monitoring |
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `agent.py` | Tool-use loop | A two-issue complaint answered after customer, order, and policy lookups |
+| 2 | `tool_errors.py` | Tool errors | Each tool call and result as a trace, then the answer |
+| 3 | `tool_errors.py --generic` | Uninstructive errors | The same task when every error says only "failed" |
 
-## Domain 8. Tools and MCPs
+### 5. Context and Cost
 
-| Lesson | Weight | Focus |
-|---|---|---|
-| 8.1 Tool Implementation | 4.4% | Function calling, tool descriptions, error handling, and approvals |
-| 8.2 MCP Server Development | 2.1% | Server authoring, deployment, resources, tools, and transports |
-| 8.3 Agentic Customization | 4.1% | Choosing among built-in tools, custom tools, Skills, and MCPs |
+Sections: 5.1 Context Management, 5.2 Tokens and Caching.
+
+Folder [`part1/05_context_and_cost`](part1/05_context_and_cost).
+
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `context_clearing.py` | Context editing | A 30-order review with old tool results cleared |
+| 2 | `context_clearing.py --off` | Context editing off | The same review without clearing, for comparison |
+
+### 6. Agents
+
+Sections: 6.1 Workflows and Agents, 6.2 Subagents, 6.3 Hosting, Memory, and Frameworks.
+
+This lesson is taught on the slides and has no programs.
+
+
+## Part 2. Shipping with Claude
+
+### 7. Claude Code
+
+Sections: 7.1 Project Context and Settings, 7.2 Permissions and Sessions.
+
+This lesson is taught on the slides and has no programs.
+
+### 8. Skills, Plugins, and MCP
+
+Sections: 8.1 Skills and Plugins, 8.2 MCP Servers.
+
+Folder [`part2/08_skills_plugins_and_mcp`](part2/08_skills_plugins_and_mcp).
+
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `orders_client.py` | MCP client and server | The server's tool and resource, one order, and the policy size |
+| 2 | `orders_server.py` | MCP server over stdio | A tool and a resource for Acme orders, started by the client |
+
+### 9. Engineering and Lifecycle
+
+Sections: 9.1 Requirements, 9.2 Lifecycle and Versioning, 9.3 Engineering Practice, 9.4 Application Design.
+
+Folder [`part2/09_engineering_and_lifecycle`](part2/09_engineering_and_lifecycle).
+
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `concurrency.py` | Bounded concurrency | 60 tickets labeled with at most 10 requests in flight, with the time taken |
+
+### 10. Debugging and Evaluation
+
+Sections: 10.1 Errors and Recovery, 10.2 Traces and Test Levels, 10.3 Evaluations.
+
+Folder [`part2/10_debugging_and_evaluation`](part2/10_debugging_and_evaluation).
+
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `errors.py` | Typed errors and retries | A rejected request and a successful one, each handled by its error class |
+| 2 | `eval_replies.py` | A minimal eval | Six replies graded by code, with the average score |
+| 3 | `judge.py` | A judge model | Two draft replies scored against the policy, with the reasoning |
+
+### 11. Security and Safety
+
+Sections: 11.1 Injection and Guardrails, 11.2 Hooks, 11.3 Keys and Secrets.
+
+Folder [`part2/11_security_and_safety`](part2/11_security_and_safety).
+
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `injection.py` | Indirect prompt injection | The tools Claude asks for and its summary of a seller page |
+| 2 | `try_hook.py` | Testing a hook | The hook's decision on three tool calls |
+| 3 | `protect_files.py` | PreToolUse hook | Blocks edits to the key file, the store database, and the Git history |
+
+### 12. Exam Method
+
+Sections: 12.1 The Exam, 12.2 Decision Practice.
+
+This lesson is taught on the slides and has no programs.
 
 ## Shared Folders
 
 The running case is the support operation of Acme, an online electronics store. All lessons draw on these folders.
 
-| Folder or file | Contents |
-|---|---|
-| `common/` | Modules that the lessons share, for cost measurement and store tools |
-| `data/store.db` | SQLite store with 150 customers, 500 orders over three months, payments including 16 duplicate captures, shipments, 1,900 courier events, and earlier refunds |
-| `data/refund_policy.md` | The returns, refunds, and delivery policy that agents follow |
-| `data/tickets.jsonl` | 60 customer messages in formal and informal English, each labeled with the correct queue |
-| `data/product_specs.json` | Product facts for the listing programs |
-| `data/glossary.json` | The English to French terms that Acme requires |
+| # | Folder or file | Contents |
+|---|---|---|
+| 1 | `common/` | Modules that the lessons share: `store_tools.py` (the tools Claude may call) and `meter.py` (tokens and cost) |
+| 2 | `data/store.db` | SQLite store with 150 customers, 500 orders over three months, payments, shipments, courier events, and earlier refunds |
+| 3 | `data/refund_policy.md` | The returns, refunds, and delivery policy that the agents follow |
+| 4 | `data/tickets.jsonl` | 60 customer messages, each labeled with the correct queue |
 
-The refund programs write to the store. To restore the original data, run `python data/build_data.py`.
+To restore the original store data, run `python data/build_data.py`.
 
 ## Cost
 
-The programs use Claude Haiku 5.5, priced at USD 0.10 per million input tokens and USD 0.50 per million output tokens. Most runs cost well under one US cent, and routing 60 tickets costs less than one cent. `fix_tests.py` uses the default Claude Code model and costs about USD 0.20, with a limit of USD 2 set by `max_budget_usd`.
+The programs use Claude Haiku 5.5, priced at USD 0.10 per million input tokens and USD 0.50 per million output tokens.
+Most runs cost well under one US cent.

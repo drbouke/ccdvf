@@ -1,0 +1,5 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/raw_http.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+HTTP status: 200 | stop_reason: end_turn
+usage: 1176 in, 279 out

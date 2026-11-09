@@ -1,0 +1,5 @@
+Recorded run, 07 November 2026. Command: python run.py part2/09_engineering_and_lifecycle/concurrency.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+60 tickets in 5.6 s
+49 of 60 match the senior agent's label

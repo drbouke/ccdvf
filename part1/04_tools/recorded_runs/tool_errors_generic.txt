@@ -1,0 +1,12 @@
+Recorded run, 07 November 2026. Command: python run.py part1/04_tools/tool_errors.py --generic
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+tool_use get_order {"order_id": "ord_2104"}
+  tool_result is_error=True: failed
+tool_use find_customer {"query": "ryan.clark7@example.com"}
+  tool_result is_error=False: {"customer_id": "C-1219", "name": "Ryan Clark", "ema
+tool_use get_order {"order_id": "ord_2104"}
+  tool_result is_error=True: failed
+tool_use get_order {"order_id": "ord_21044"}
+  tool_result is_error=False: {"order_id": "ord_21044", "customer_id": "C-1219", "
+answer: I couldn't pull up ord_2104. The system returned an error both times, and that number isn't on your account. I think you mean **ord_21044**, the delay

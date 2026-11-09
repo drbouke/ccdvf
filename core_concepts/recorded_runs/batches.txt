@@ -1,0 +1,6 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/batches.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+msgbatch_01RVhFifYXFMQUJNrdLfoCKq: 60 requests, in_progress
+ended after 7741 s: 60 succeeded, 0 errored
+48 of 60 match the senior agent's label

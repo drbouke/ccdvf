@@ -1,6 +1,0 @@
-$ claude -p "Reply with the single word Ready"
-Ready
-
-$ cd domain1
-$ claude -p "Reply with the single word Ready"
-Not logged in · Please run /login

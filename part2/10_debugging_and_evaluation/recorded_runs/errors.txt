@@ -1,0 +1,6 @@
+Recorded run, 07 November 2026. Command: python run.py part2/10_debugging_and_evaluation/errors.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+no messages: BadRequestError, status 400
+  messages: at least one message is required
+ticket T-1001: end_turn, 551 output tokens

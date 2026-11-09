@@ -1,0 +1,9 @@
+Recorded run, 07 November 2026. Command: python run.py part1/03_prompts_and_output/label_prompts.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+bare: 10 different replies, 0 of 10 labels
+  1 x "I'm sorry about the duplicate charge. He"
+  1 x 'Category: Shipping delay / Delivery exce'
+constrained: 5 different replies, 9 of 10 labels
+  3 x 'delivery'
+  2 x 'billing'

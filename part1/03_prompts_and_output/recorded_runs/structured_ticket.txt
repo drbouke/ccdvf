@@ -1,0 +1,9 @@
+Recorded run, 07 November 2026. Command: python run.py part1/03_prompts_and_output/structured_ticket.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+T-1001: billing, needs_human=True
+  Customer charged twice for order ord_20931; requests refund of duplicate.
+T-1002: delivery, needs_human=True
+  Parcel stuck at north hub since Thursday; address verification failing for order ord_21044.
+T-1003: delivery, needs_human=False
+  Blender arrived with cracked jug; customer requests replacement with photos.

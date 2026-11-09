@@ -1,0 +1,8 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/first_request.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+thinking
+text
+  Thanks for letting us know, and sorry for the delay on order ord_21044. Since your address is correct, I've asked the courier to reattempt delivery. Parcels held for address verification stay at the north hub for 7 days, so please keep an eye on tracking. If it isn't moving or you get a failed attempt, reply here and we'll follow up. Could you confirm your postcode so we can double-check it against the courier's record?
+stop_reason: end_turn
+usage: 1176 in, 716 out

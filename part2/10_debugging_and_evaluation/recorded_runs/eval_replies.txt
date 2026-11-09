@@ -1,0 +1,5 @@
+Recorded run, 07 November 2026. Command: python run.py part2/10_debugging_and_evaluation/eval_replies.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+T-1001 1.0  T-1002 1.0  T-1003 1.0  T-1004 1.0  T-1005 0.0  T-1006 1.0
+Average score: 0.83

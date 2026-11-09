@@ -1,0 +1,26 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/tool_request.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+stop_reason: tool_use
+{
+  "id": "toolu_01Ao26hUTnzr46GwATQHFooM",
+  "caller": {
+    "type": "direct"
+  },
+  "input": {
+    "order_id": "ord_21044"
+  },
+  "name": "get_order",
+  "type": "tool_use"
+}
+{
+  "id": "toolu_01WavfEQyan8wqxzzEsh37vg",
+  "caller": {
+    "type": "direct"
+  },
+  "input": {
+    "query": "address cannot be verified delivery hold"
+  },
+  "name": "search_policy",
+  "type": "tool_use"
+}

@@ -1,0 +1,9 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/caching.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+T-1001: 1,128 written, 0 read, 56 not cached
+  input USD 0.0001466, without the cache 0.0001184
+T-1002: 0 written, 1,128 read, 48 not cached
+  input USD 0.0000161, without the cache 0.0001176
+T-1003: 0 written, 1,128 read, 43 not cached
+  input USD 0.0000156, without the cache 0.0001171

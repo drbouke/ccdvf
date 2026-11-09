@@ -1,0 +1,9 @@
+Recorded run, 07 November 2026. Command: python run.py part2/11_security_and_safety/try_hook.py
+Real output; this program calls no model.
+==============================================================================
+Edit /repo/support-agent/.env
+  exit 2, Blocked: /repo/support-agent/.env matches '.env'
+Write /repo/support-agent/data/store.db
+  exit 2, Blocked: /repo/support-agent/data/store.db matches 'store.db'
+Edit /repo/support-agent/store_tools.py
+  exit 0, allowed

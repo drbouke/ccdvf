@@ -1,0 +1,7 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/tokens.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+60 tickets: 20 to 58 tokens
+Request with the policy: 1,113 to 1,151
+Whole run: 67,770 input tokens, USD 0.0068
+The policy is 97% of them

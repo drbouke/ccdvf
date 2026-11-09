@@ -1,0 +1,10 @@
+Recorded run, 07 November 2026. Command: python run.py part1/04_tools/tool_errors.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+tool_use get_order {"order_id": "ord_2104"}
+  tool_result is_error=True: Unknown order id. find_customer with the customer's 
+tool_use find_customer {"query": "ryan.clark7@example.com"}
+  tool_result is_error=False: {"customer_id": "C-1219", "name": "Ryan Clark", "ema
+tool_use get_order {"order_id": "ord_21044"}
+  tool_result is_error=False: {"order_id": "ord_21044", "customer_id": "C-1219", "
+answer: I couldn't find ord_2104, but I think you mean **ord_21044**, the Lumen 27in 4K Monitor ($1,299.00) you placed on October 22, 2026. It's on the accoun

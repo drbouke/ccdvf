@@ -1,0 +1,7 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/stream.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+ 2.20 s  'I'
+ 2.20 s  "'m sorry your"
+ 2.20 s  ' blender arrived with a c'
+ 3.34 s  done, 59 pieces, 476 output tokens

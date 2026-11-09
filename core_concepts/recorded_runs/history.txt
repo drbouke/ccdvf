@@ -1,0 +1,5 @@
+Recorded run, 07 November 2026. Command: python run.py core_concepts/history.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+Without history: For a change-of-mind return, you pay the $12 flat-rate return shipping through the Acme return label, unless you're a Gold tier member, in which case it's free. If the item arrived damaged, defective or wrong, return shipping is free, so please tell me whether this is a change of mind or a problem with the item, and when it was delivered.
+With history:    No, return shipping is free for damaged items, so you won't pay any postage. Your full refund, including the original shipping fee, will go to your original payment method once the return is processed, usually within 5 to 10 business days for card payments.

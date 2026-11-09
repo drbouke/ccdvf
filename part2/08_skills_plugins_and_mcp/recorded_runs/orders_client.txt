@@ -1,0 +1,11 @@
+Recorded run, 07 November 2026. Command: python run.py part2/08_skills_plugins_and_mcp/orders_client.py
+Real output; this program calls no model.
+==============================================================================
+connected to acme-orders
+tool order_record: ['order_id']
+resource acme://refund-policy (text/markdown)
+ord_21044: delayed, Held: delivery address could not be verified
+policy: 3,246 characters
+
+[stderr]
+INFO:acme-orders:order_record ord_21044

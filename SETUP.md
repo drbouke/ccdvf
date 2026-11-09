@@ -9,7 +9,7 @@ The course runs in Visual Studio Code (VS Code), either in the browser through G
 
 ## Step 2. Course Folder
 
-1. Download **CCDV-F Domain 1 Programs** from the course Materials page and unzip it.
+1. Download **CCDV-F Course Programs** from the course Materials page and unzip it.
 2. In VS Code, choose **File > Open Folder** and open the `ccdvf` folder itself.
 3. Install the recommended extensions when VS Code offers them. These are Python, Python Debugger, and Claude Code.
 
@@ -51,19 +51,19 @@ Verify the environment. The check sends one small request and ends with `Ready.`
 python check_setup.py --ping
 ```
 
-To follow the key from the file to the request, run the key example.
+To follow the key from the file to the request, run the key program.
 
 ```
-python domain1/1.0_environment/inject_key.py
+python part1/00_environment/inject_key.py
 ```
 
-Run any example from the `ccdvf` folder.
+Run any program from the `ccdvf` folder.
 
 ```
-python run.py domain1/1.2_agent_construction/agent.py
+python run.py part1/04_tools/agent.py
 ```
 
-An example can also run with **F5**, through the **Run this example** configuration in `.vscode/launch.json`.
+A program can also run with **F5**, through the **Run this program** configuration in `.vscode/launch.json`.
 
 Everyone holding the course key can see files uploaded through the API with it, so real data does not belong there. A personal API key stays private and never appears in code, on a slide, or in Git. Personal keys are created at https://platform.claude.com under **Keys & access**, preferably in a workspace with a monthly spend limit. API usage is billed in the Claude Console and is separate from a Claude subscription.
 
@@ -77,7 +77,7 @@ The Claude Code extension takes the course key from `.env` through the `.claude/
 
 In a codespace, the `claude` command is already available in the terminal. Start it from the `ccdvf` folder, because Claude Code reads its project settings from the folder where it starts. On a laptop, this command requires the separate installation described at https://code.claude.com/docs/en/setup.
 
-The Agent SDK examples `refund_agent.py`, `audit_subagents.py`, and `fix_tests.py` need neither the extension nor the command. The SDK package includes its own copy of Claude Code and uses `ANTHROPIC_API_KEY`.
+The Agent SDK program `core_concepts/agent_sdk.py` needs neither the extension nor the command. The SDK package includes its own copy of Claude Code and uses `ANTHROPIC_API_KEY`.
 
 ## Step 6. GitHub Codespaces
 

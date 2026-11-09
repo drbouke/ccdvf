@@ -1,10 +1,10 @@
-"""Run a course example with your API key:
+"""Run a program of the Acme support project with your API key:
 
-    python run.py domain1/1.2_agent_construction/agent.py
-    python run.py domain1/1.1_agent_architecture/route_tickets.py --votes 3
+    python run.py part1/04_tools/agent.py
+    python run.py part1/04_tools/tool_errors.py --generic
 
-It loads ANTHROPIC_API_KEY from the .env file next to this script (or your environment), then runs the example from its
-own folder. Without a key it stops and names the recorded run of that example in its lesson folder, which holds the real
+It loads ANTHROPIC_API_KEY from the .env file next to this script (or your environment), then runs the program from its
+own folder. Without a key it stops and names the recorded run of that program in its lesson folder, which holds the real
 output with its tokens and cost.
 """
 import os
@@ -29,10 +29,10 @@ def main():
     script = Path(args[0]).resolve()
     if not script.is_file():
         sys.exit(f'File not found: {args[0]}')
-    if not os.environ.get('ANTHROPIC_API_KEY'):
+    if not os.environ.get('ANTHROPIC_API_KEY') and 'anthropic' in script.read_text(encoding='utf-8'):   # a program that calls no model runs without a key
         recorded = sorted((script.parent / 'recorded_runs').glob(script.stem + '*.txt'))
         sys.exit('No ANTHROPIC_API_KEY found (see SETUP.md, step 4).\n'
-                 + ('Recorded run of this example: ' + ', '.join(str(r.relative_to(ROOT)) for r in recorded) if recorded else ''))
+                 + ('Recorded run of this program: ' + ', '.join(str(r.relative_to(ROOT)) for r in recorded) if recorded else ''))
     sys.path.insert(0, str(script.parent))
     os.chdir(script.parent)
     sys.argv = [str(script)] + args[1:]
