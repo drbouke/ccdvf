@@ -1,0 +1,9 @@
+$ python run.py labs/lab03_structured_claim/extract_claim.py
+CLM-24001: 4 trainees, 3 claimable, invoice USD 3,200.00
+CLM-24002: 5 trainees, 5 claimable, invoice USD 5,400.00
+CLM-24003: 6 trainees, 5 claimable, invoice USD 11,670.00
+CLM-24004: 8 trainees, 8 claimable, invoice USD 4,000.00
+CLM-24005: 4 trainees, 3 claimable, invoice USD 6,880.00
+CLM-24006: 7 trainees, 5 claimable, invoice USD 10,920.00
+Saved claims.json
+6 call(s), 29,222 input + 4,645 output tokens, USD 0.00524, 23.4 s, model claude-haiku-5-5

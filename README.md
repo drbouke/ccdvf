@@ -195,6 +195,17 @@ Sections: 12.1 The Exam, 12.2 Decision Practice.
 
 This lesson is taught on the slides and has no programs.
 
+## Labs
+
+Folder [`labs`](labs). Alongside the lessons you build Grant Desk, a claims assistant for a training fund, one
+component per lab: reading scanned documents, structured output, tools, caching, agents, MCP, batches, evaluation, and
+safety. Each lab has numbered steps, hints that open one at a time, and a check that tells you which step is done:
+
+```
+python labs/check.py 1
+```
+
+
 ## Shared Folders
 
 The running case is the support operation of Acme, an online electronics store. All lessons draw on these folders.

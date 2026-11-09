@@ -1,0 +1,262 @@
+{
+ "CLM-24001": {
+  "class_id": "51207",
+  "course_title": "Data Analysis with Python",
+  "employer": "Northwind Logistics",
+  "provider": "Brightpath Training",
+  "trainer": "Daniel Brooks",
+  "start_date": "2026-10-05",
+  "end_date": "2026-10-06",
+  "training_days": 2,
+  "invoice_number": "BT-INV-3318",
+  "invoice_total": 3200,
+  "fee_per_trainee_day": 400,
+  "trainees": [
+   {
+    "trainee_id": "E-10411",
+    "name": "Sara Mitchell",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "E-10418",
+    "name": "John Carter",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "E-10425",
+    "name": "Lisa Wong",
+    "days_present": 1
+   },
+   {
+    "trainee_id": "E-10433",
+    "name": "Omar Haddad",
+    "days_present": 2
+   }
+  ]
+ },
+ "CLM-24002": {
+  "class_id": "51244",
+  "course_title": "Project Management Essentials",
+  "employer": "Bluepeak Foods",
+  "provider": "Summit Skills Academy",
+  "trainer": "Rachel Green",
+  "start_date": "2026-09-14",
+  "end_date": "2026-09-16",
+  "training_days": 3,
+  "invoice_number": "SSA-2026-0912",
+  "invoice_total": 5400,
+  "fee_per_trainee_day": 350,
+  "trainees": [
+   {
+    "trainee_id": "BP-2201",
+    "name": "Emily Turner",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "BP-2207",
+    "name": "Michael Ross",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "BP-2214",
+    "name": "Grace Lee",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "BP-2230",
+    "name": "David Kim",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "BP-2236",
+    "name": "Hannah Price",
+    "days_present": 3
+   }
+  ]
+ },
+ "CLM-24003": {
+  "class_id": "51302",
+  "course_title": "Cloud Security Fundamentals",
+  "employer": "Harbor Freight Lines",
+  "provider": "Brightpath Training",
+  "trainer": "Priya Nair",
+  "start_date": "2026-10-12",
+  "end_date": "2026-10-16",
+  "training_days": 5,
+  "invoice_number": "BT-INV-3351",
+  "invoice_total": 11670,
+  "fee_per_trainee_day": 380,
+  "trainees": [
+   {
+    "trainee_id": "HF-0712",
+    "name": "Kevin Walsh",
+    "days_present": 5
+   },
+   {
+    "trainee_id": "HF-0719",
+    "name": "Nadia Rahman",
+    "days_present": 4
+   },
+   {
+    "trainee_id": "HF-0723",
+    "name": "Tom Becker",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "HF-0731",
+    "name": "Aisha Bello",
+    "days_present": 5
+   },
+   {
+    "trainee_id": "HF-0744",
+    "name": "Chris Novak",
+    "days_present": 5
+   },
+   {
+    "trainee_id": "HF-0750",
+    "name": "Laura Silva",
+    "days_present": 4
+   }
+  ]
+ },
+ "CLM-24004": {
+  "class_id": "51318",
+  "course_title": "Customer Service Excellence",
+  "employer": "Greenleaf Retail",
+  "provider": "Clearview Learning",
+  "trainer": "Mark Ellis",
+  "start_date": "2026-08-24",
+  "end_date": "2026-08-25",
+  "training_days": 2,
+  "invoice_number": "CVL-7781",
+  "invoice_total": 4000,
+  "fee_per_trainee_day": 250,
+  "trainees": [
+   {
+    "trainee_id": "GR-5501",
+    "name": "Anna Schmidt",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "GR-5502",
+    "name": "Ben Foster",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "GR-5507",
+    "name": "Carla Diaz",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "GR-5511",
+    "name": "Dev Patel",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "GR-5513",
+    "name": "Ella Brown",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "GR-5520",
+    "name": "Felix Martin",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "GR-5524",
+    "name": "Gina Russo",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "GR-5530",
+    "name": "Ivan Petrov",
+    "days_present": 2
+   }
+  ]
+ },
+ "CLM-24005": {
+  "class_id": "51355",
+  "course_title": "Industrial Safety Supervision",
+  "employer": "Ironbridge Manufacturing",
+  "provider": "Summit Skills Academy",
+  "trainer": "Victor Hale",
+  "start_date": "2026-10-19",
+  "end_date": "2026-10-22",
+  "training_days": 4,
+  "invoice_number": "SSA-2026-1023",
+  "invoice_total": 6880,
+  "fee_per_trainee_day": 420,
+  "trainees": [
+   {
+    "trainee_id": "IB-3302",
+    "name": "Paul Morgan",
+    "days_present": 4
+   },
+   {
+    "trainee_id": "IB-3309",
+    "name": "Sofia Rossi",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "IB-3315",
+    "name": "Liam Murphy",
+    "days_present": 4
+   },
+   {
+    "trainee_id": "IB-3321",
+    "name": "Mei Chen",
+    "days_present": 4
+   }
+  ]
+ },
+ "CLM-24006": {
+  "class_id": "51371",
+  "course_title": "Leadership for New Managers",
+  "employer": "Northwind Logistics",
+  "provider": "Clearview Learning",
+  "trainer": "Julia Stone",
+  "start_date": "2026-09-28",
+  "end_date": "2026-09-30",
+  "training_days": 3,
+  "invoice_number": "CVL-7804",
+  "invoice_total": 10920,
+  "fee_per_trainee_day": 500,
+  "trainees": [
+   {
+    "trainee_id": "E-10402",
+    "name": "Robert Hayes",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "E-10409",
+    "name": "Natalie Cruz",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "E-10414",
+    "name": "Samuel Ortiz",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "E-10420",
+    "name": "Tina Park",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "E-10427",
+    "name": "Umar Siddiqui",
+    "days_present": 2
+   },
+   {
+    "trainee_id": "E-10431",
+    "name": "Vera Ivanova",
+    "days_present": 3
+   },
+   {
+    "trainee_id": "E-10439",
+    "name": "Will Jordan",
+    "days_present": 3
+   }
+  ]
+ }
+}

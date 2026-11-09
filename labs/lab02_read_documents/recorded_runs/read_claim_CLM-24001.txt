@@ -1,0 +1,20 @@
+$ python run.py labs/lab02_read_documents/read_claim.py CLM-24001
+Claim CLM-24001
+
+**Attendance (2 training days, 05/10/2026 and 06/10/2026)**
+
+| # | Trainee | Days attended | Attendance |
+|---|---|---|---|
+| 1 | Sara Mitchell | 2/2 | 100% |
+| 2 | John Carter | 2/2 | 100% |
+| 3 | Lisa Wong | 1/2 | 50% |
+| 4 | Omar Haddad | 2/2 | 100% |
+
+Lisa Wong has initials only for 05/10/2026. Her 06/10/2026 cell is blank.
+
+**Invoice total:** USD 3,200.00 (BT-INV-3318), which is 4 trainees × 2 days × USD 400.00.
+
+**Trainees below 80% attendance:** Lisa Wong (50%). The invoice bills her, and the attendance list states that trainees below 80% are not claimable under the Acme Skills Fund.
+
+Excluding Lisa Wong's 2 billed days (USD 800.00) leaves a claimable amount of USD 2,400.00 for the other three trainees. This is a calculation from the invoice's per-trainee, per-day rate, so Brightpath would need to reissue or credit the invoice before the claim is paid at that amount.
+1 call(s), 3,973 input + 964 output tokens, USD 0.00088, 5.0 s, model claude-haiku-5-5

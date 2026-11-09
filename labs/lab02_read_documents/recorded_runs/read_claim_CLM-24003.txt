@@ -1,0 +1,20 @@
+$ python run.py labs/lab02_read_documents/read_claim.py CLM-24003
+Claim CLM-24003
+
+**Attendance (days attended out of 5)**
+
+| Trainee | Attended | Rate |
+|---|---|---|
+| Kevin Walsh (HF-0712) | 5/5 | 100% |
+| Nadia Rahman (HF-0719) | 4/5 | 80% |
+| Tom Becker (HF-0723) | 3/5 | 60% |
+| Aisha Bello (HF-0731) | 5/5 | 100% |
+| Chris Novak (HF-0744) | 5/5 | 100% |
+| Laura Silva (HF-0750) | 4/5 | 80% |
+
+**Invoice total:** USD 11,670.00 (BT-INV-3351). This is 6 trainees × 5 days × USD 380.00 = USD 11,400.00 in course fees, plus 6 × USD 45.00 = USD 270.00 in materials.
+
+**Trainees below 80% attendance:** Tom Becker (3/5, 60%). The invoice bills him in full, and the attendance form states that trainees below 80% are not claimable under the Acme Skills Fund. His share of the invoice is USD 1,945.00 (5 × USD 380.00 + USD 45.00), so the claimable amount would be USD 9,725.00 unless the invoice is corrected.
+
+Nadia Rahman and Laura Silva are at exactly 80%, which meets the threshold, so they are not flagged.
+1 call(s), 4,361 input + 1,171 output tokens, USD 0.00102, 5.9 s, model claude-haiku-5-5
