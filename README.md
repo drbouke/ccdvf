@@ -92,25 +92,27 @@ Folder [`part1/01_foundations`](part1/01_foundations).
 
 ### 2. Claude API
 
-Sections: 2.1 Responses and Streams.
+Sections: 2.1 Requests with Files.
 
 Folder [`part1/02_claude_api`](part1/02_claude_api).
 
 | # | Program | Concept | Output |
 |---|---|---|---|
-| 1 | `stream_events.py` | Streaming events | Each server-sent event of one reply, in arrival order |
-| 2 | `stream_tool.py` | A streamed tool call | The tool input as it arrives, and when it becomes valid JSON |
+| 1 | `read_slip.py` | An image in a request | The courier slip read from a picture and checked against the store record |
+| 2 | `files_api.py` | The Files API | The invoice uploaded once, two questions by file id, then deleted |
+| 3 | `stream_events.py` | Streaming events (extra practice) | Each server-sent event of one reply, in arrival order |
+| 4 | `stream_tool.py` | A streamed tool call (extra practice) | The tool input as it arrives, and when it becomes valid JSON |
 
 ### 3. Prompts and Output
 
-Sections: 3.1 Prompts and Output.
+Sections: 3.1 Structured Output.
 
 Folder [`part1/03_prompts_and_output`](part1/03_prompts_and_output).
 
 | # | Program | Concept | Output |
 |---|---|---|---|
-| 1 | `label_prompts.py` | Output constraints and examples | The replies of each prompt on ten tickets, and how many are exact labels |
-| 2 | `structured_ticket.py` | Structured outputs | Three tickets triaged as JSON that always parses |
+| 1 | `structured_ticket.py` | Structured outputs | Three tickets triaged as JSON that always parses |
+| 2 | `label_prompts.py` | Output constraints and examples (extra practice) | The replies of each prompt on ten tickets, and how many are exact labels |
 
 ### 4. Tools
 
@@ -227,8 +229,10 @@ The running case is the support operation of Acme, an online electronics store. 
 | 2 | `data/store.db` | SQLite store with 150 customers, 500 orders over three months, payments, shipments, courier events, and earlier refunds |
 | 3 | `data/refund_policy.md` | The returns, refunds, and delivery policy that the agents follow |
 | 4 | `data/tickets.jsonl` | 60 customer messages, each labeled with the correct queue |
+| 5 | `data/invoice_ord_20931.pdf` | The invoice of the blender order charged twice, built from the store records |
+| 6 | `data/slip_ord_21044.png` | The courier's delivery exception notice for the parcel held at the hub |
 
-To restore the original store data, run `python data/build_data.py`.
+To restore the original store data, run `python data/build_data.py`; to rebuild the invoice and the slip, run `python data/build_documents.py`.
 
 ## Cost
 

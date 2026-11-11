@@ -1,0 +1,7 @@
+Recorded run, 11 November 2026. Command: python run.py part1/02_claude_api/files_api.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+uploaded invoice_ord_20931.pdf: file_01FUbxpnz..., 2043 bytes
+[1865 input tokens] Two payments were captured, totaling USD 578.00.
+[1865 input tokens] The total charged exceeds the order total by **USD 289.00**, because the order was charged twice (USD 578.00 charged vs. USD 289.00 owed).
+deleted: True
