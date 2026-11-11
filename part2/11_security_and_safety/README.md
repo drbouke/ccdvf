@@ -1,6 +1,6 @@
 # 11. Security and Safety
 
-Part 2. Shipping with Claude. The lesson covers 11.1 Injection and Guardrails, 11.2 Hooks, and 11.3 Keys and Secrets.
+Part 2. Shipping with Claude. The lesson covers 11.1 Security in Code.
 
 | # | Program | Concept | Output |
 |---|---|---|---|

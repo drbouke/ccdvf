@@ -1,6 +1,6 @@
 # 8. Skills, Plugins, and MCP
 
-Part 2. Shipping with Claude. The lesson covers 8.1 Skills and Plugins and 8.2 MCP Servers.
+Part 2. Shipping with Claude. The lesson covers 8.1 Skills and MCP Servers.
 
 | # | Program | Concept | Output |
 |---|---|---|---|

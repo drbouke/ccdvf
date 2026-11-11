@@ -1,6 +1,6 @@
 # 10. Debugging and Evaluation
 
-Part 2. Shipping with Claude. The lesson covers 10.1 Errors and Recovery, 10.2 Traces and Test Levels, and 10.3 Evaluations.
+Part 2. Shipping with Claude. The lesson covers 10.1 Errors and Evaluation.
 
 | # | Program | Concept | Output |
 |---|---|---|---|

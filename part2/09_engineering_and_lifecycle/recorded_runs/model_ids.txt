@@ -1,0 +1,9 @@
+Recorded run, 11 November 2026. Command: python run.py part2/09_engineering_and_lifecycle/model_ids.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+claude-haiku-4-5          names claude-haiku-4-5-20251001
+                          ran   claude-haiku-4-5-20251001: billing
+claude-haiku-4-5-20251001 names claude-haiku-4-5-20251001
+                          ran   claude-haiku-4-5-20251001: billing
+claude-haiku-5-5          names claude-haiku-5-5
+                          ran   claude-haiku-5-5: billing

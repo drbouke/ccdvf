@@ -23,7 +23,7 @@ so the slide you are on always tells you where its code is. Every program also h
 | 6 | Part 1 | 4. Tools | [`part1/04_tools`](part1/04_tools) |
 | 7 | Part 1 | 5. Context and Cost | [`part1/05_context_and_cost`](part1/05_context_and_cost) |
 | 8 | Part 1 | 6. Agents | [`part1/06_agents`](part1/06_agents) |
-| 9 | Part 2 | 7. Claude Code | Slides only |
+| 9 | Part 2 | 7. Claude Code | [`part2/07_claude_code`](part2/07_claude_code) |
 | 10 | Part 2 | 8. Skills, Plugins, and MCP | [`part2/08_skills_plugins_and_mcp`](part2/08_skills_plugins_and_mcp) |
 | 11 | Part 2 | 9. Engineering and Lifecycle | [`part2/09_engineering_and_lifecycle`](part2/09_engineering_and_lifecycle) |
 | 12 | Part 2 | 10. Debugging and Evaluation | [`part2/10_debugging_and_evaluation`](part2/10_debugging_and_evaluation) |
@@ -153,13 +153,17 @@ Folder [`part1/06_agents`](part1/06_agents).
 
 ### 7. Claude Code
 
-Sections: 7.1 Project Context and Settings, 7.2 Permissions and Sessions.
+Sections: 7.1 Claude Code Setup.
 
-This lesson is taught on the slides and has no programs.
+Folder [`part2/07_claude_code`](part2/07_claude_code).
+
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `permissions.py` | Permission rules, deny over allow | A policy read that runs and a tickets read that a deny rule refuses |
 
 ### 8. Skills, Plugins, and MCP
 
-Sections: 8.1 Skills and Plugins, 8.2 MCP Servers.
+Sections: 8.1 Skills and MCP Servers.
 
 Folder [`part2/08_skills_plugins_and_mcp`](part2/08_skills_plugins_and_mcp).
 
@@ -170,17 +174,18 @@ Folder [`part2/08_skills_plugins_and_mcp`](part2/08_skills_plugins_and_mcp).
 
 ### 9. Engineering and Lifecycle
 
-Sections: 9.1 Requirements, 9.2 Lifecycle and Versioning, 9.3 Engineering Practice, 9.4 Application Design.
+Sections: 9.1 Lifecycle and Engineering.
 
 Folder [`part2/09_engineering_and_lifecycle`](part2/09_engineering_and_lifecycle).
 
 | # | Program | Concept | Output |
 |---|---|---|---|
 | 1 | `concurrency.py` | Bounded concurrency | 60 tickets labeled with at most 10 requests in flight, with the time taken |
+| 2 | `model_ids.py` | Model IDs and snapshots | The snapshot each of three IDs names, and the one that answered |
 
 ### 10. Debugging and Evaluation
 
-Sections: 10.1 Errors and Recovery, 10.2 Traces and Test Levels, 10.3 Evaluations.
+Sections: 10.1 Errors and Evaluation.
 
 Folder [`part2/10_debugging_and_evaluation`](part2/10_debugging_and_evaluation).
 
@@ -192,7 +197,7 @@ Folder [`part2/10_debugging_and_evaluation`](part2/10_debugging_and_evaluation).
 
 ### 11. Security and Safety
 
-Sections: 11.1 Injection and Guardrails, 11.2 Hooks, 11.3 Keys and Secrets.
+Sections: 11.1 Security in Code.
 
 Folder [`part2/11_security_and_safety`](part2/11_security_and_safety).
 
@@ -204,7 +209,7 @@ Folder [`part2/11_security_and_safety`](part2/11_security_and_safety).
 
 ### 12. Exam Method
 
-Sections: 12.1 The Exam, 12.2 Decision Practice.
+Sections: 12.1 The Exam.
 
 This lesson is taught on the slides and has no programs.
 

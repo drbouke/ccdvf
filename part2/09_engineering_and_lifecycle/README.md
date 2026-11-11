@@ -1,10 +1,11 @@
 # 9. Engineering and Lifecycle
 
-Part 2. Shipping with Claude. The lesson covers 9.1 Requirements, 9.2 Lifecycle and Versioning, 9.3 Engineering Practice, and 9.4 Application Design.
+Part 2. Shipping with Claude. The lesson covers 9.1 Lifecycle and Engineering.
 
 | # | Program | Concept | Output |
 |---|---|---|---|
 | 1 | `concurrency.py` | Bounded concurrency | 60 tickets labeled with at most 10 requests in flight, with the time taken |
+| 2 | `model_ids.py` | Model IDs and snapshots | The snapshot each of three IDs names, and the one that answered |
 
 Run every program from the `ccdvf` folder, for example:
 
