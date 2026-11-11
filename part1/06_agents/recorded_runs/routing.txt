@@ -1,0 +1,7 @@
+Recorded run, 11 November 2026. Command: python run.py part1/06_agents/routing.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+T-1001 -> billing: I can't process refunds, but the duplicate $289 charge should return in 5–10 business days.
+T-1002 -> delivery: I can't see live tracking, so contact the courier with ord_21044 to clear the address hold.
+T-1003 -> returns: Damaged-on-arrival replacement: submit your jug and box photos to request a replacement.
+6 call(s), 508 input + 1,277 output tokens, USD 0.00069, 10.2 s, model claude-haiku-5-5

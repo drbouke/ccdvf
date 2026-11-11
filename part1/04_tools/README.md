@@ -1,6 +1,6 @@
 # 4. Tools
 
-Part 1. Building with Claude. The lesson covers 4.1 Tool Round Trip, 4.2 Tool Design, and 4.3 Control and Approval.
+Part 1. Building with Claude. The lesson covers 4.1 Tools in Practice.
 
 | # | Program | Concept | Output |
 |---|---|---|---|

@@ -17,12 +17,12 @@ so the slide you are on always tells you where its code is. Every program also h
 |---|---|---|---|
 | 1 | Core Concepts | Core Concepts | [`core_concepts`](core_concepts) |
 | 2 | Part 1 | 0. Environment | [`part1/00_environment`](part1/00_environment) |
-| 3 | Part 1 | 1. Foundations | Slides only |
+| 3 | Part 1 | 1. Foundations | [`part1/01_foundations`](part1/01_foundations) |
 | 4 | Part 1 | 2. Claude API | [`part1/02_claude_api`](part1/02_claude_api) |
 | 5 | Part 1 | 3. Prompts and Output | [`part1/03_prompts_and_output`](part1/03_prompts_and_output) |
 | 6 | Part 1 | 4. Tools | [`part1/04_tools`](part1/04_tools) |
 | 7 | Part 1 | 5. Context and Cost | [`part1/05_context_and_cost`](part1/05_context_and_cost) |
-| 8 | Part 1 | 6. Agents | Slides only |
+| 8 | Part 1 | 6. Agents | [`part1/06_agents`](part1/06_agents) |
 | 9 | Part 2 | 7. Claude Code | Slides only |
 | 10 | Part 2 | 8. Skills, Plugins, and MCP | [`part2/08_skills_plugins_and_mcp`](part2/08_skills_plugins_and_mcp) |
 | 11 | Part 2 | 9. Engineering and Lifecycle | [`part2/09_engineering_and_lifecycle`](part2/09_engineering_and_lifecycle) |
@@ -83,21 +83,27 @@ Folder [`part1/00_environment`](part1/00_environment).
 
 Sections: 1.1 Models and Behavior.
 
-This lesson is taught on the slides and has no programs.
+Folder [`part1/01_foundations`](part1/01_foundations).
+
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `effort.py` | Effort | The same ticket at low and high effort, with its blocks and output tokens |
+| 2 | `test_replies.py` | Testing varied output | Three wordings of one reply, an exact text test and a property test |
 
 ### 2. Claude API
 
-Sections: 2.1 Messages API and Connections, 2.2 Streaming, 2.3 Images, Documents, and Thinking, 2.4 Batches and Platforms.
+Sections: 2.1 Responses and Streams.
 
 Folder [`part1/02_claude_api`](part1/02_claude_api).
 
 | # | Program | Concept | Output |
 |---|---|---|---|
 | 1 | `stream_events.py` | Streaming events | Each server-sent event of one reply, in arrival order |
+| 2 | `stream_tool.py` | A streamed tool call | The tool input as it arrives, and when it becomes valid JSON |
 
 ### 3. Prompts and Output
 
-Sections: 3.1 Prompt Craft, 3.2 Output Handling.
+Sections: 3.1 Prompts and Output.
 
 Folder [`part1/03_prompts_and_output`](part1/03_prompts_and_output).
 
@@ -108,7 +114,7 @@ Folder [`part1/03_prompts_and_output`](part1/03_prompts_and_output).
 
 ### 4. Tools
 
-Sections: 4.1 Tool Round Trip, 4.2 Tool Design, 4.3 Control and Approval.
+Sections: 4.1 Tools in Practice.
 
 Folder [`part1/04_tools`](part1/04_tools).
 
@@ -120,7 +126,7 @@ Folder [`part1/04_tools`](part1/04_tools).
 
 ### 5. Context and Cost
 
-Sections: 5.1 Context Management, 5.2 Tokens and Caching.
+Sections: 5.1 Context and Cost.
 
 Folder [`part1/05_context_and_cost`](part1/05_context_and_cost).
 
@@ -128,12 +134,17 @@ Folder [`part1/05_context_and_cost`](part1/05_context_and_cost).
 |---|---|---|---|
 | 1 | `context_clearing.py` | Context editing | A 30-order review with old tool results cleared |
 | 2 | `context_clearing.py --off` | Context editing off | The same review without clearing, for comparison |
+| 3 | `cache_miss.py` | Cache invalidation | Cache tokens written and read before and after a tool description edit |
 
 ### 6. Agents
 
-Sections: 6.1 Workflows and Agents, 6.2 Subagents, 6.3 Hosting, Memory, and Frameworks.
+Sections: 6.1 Workflows and Agents in Practice.
 
-This lesson is taught on the slides and has no programs.
+Folder [`part1/06_agents`](part1/06_agents).
+
+| # | Program | Concept | Output |
+|---|---|---|---|
+| 1 | `routing.py` | Routing workflow | Three tickets labeled and answered by the specialist prompt for their label |
 
 
 ## Part 2. Shipping with Claude

@@ -1,6 +1,6 @@
 # 3. Prompts and Output
 
-Part 1. Building with Claude. The lesson covers 3.1 Prompt Craft and 3.2 Output Handling.
+Part 1. Building with Claude. The lesson covers 3.1 Prompts and Output.
 
 | # | Program | Concept | Output |
 |---|---|---|---|

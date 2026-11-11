@@ -1,0 +1,7 @@
+Recorded run, 11 November 2026. Command: python run.py part1/05_context_and_cost/cache_miss.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+first request            written  1650  read     0
+same prefix again        written     0  read  1650
+tool description edited  written  1658  read     0
+edited prefix again      written     0  read  1658

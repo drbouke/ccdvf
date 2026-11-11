@@ -1,0 +1,8 @@
+Recorded run, 11 November 2026. Command: python run.py part1/01_foundations/test_replies.py
+Real output from the Claude API; model output varies from run to run.
+==============================================================================
+- 24 words, ends: ...he duplicate $289 charge refunded.
+- 20 words, ends: ...he extra $289 transaction for you.
+- 19 words, ends: ...e extra $289 transaction refunded.
+exact text test: FAIL
+property test:   FAIL
